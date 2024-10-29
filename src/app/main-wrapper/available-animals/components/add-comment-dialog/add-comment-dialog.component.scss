@@ -1,0 +1,55 @@
+$star-filled-color: gold;
+$star-empty-color: #c5c5c5;
+
+.container {
+  width: 500px;
+  min-height: 300px;
+
+  .error-message {
+    color: red;
+  }
+
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  textarea {
+    width: 99%;
+    font-size: 1.25em;
+  }
+
+  .star-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5em;
+
+    .error-message {
+      color: red;
+    }
+
+    .star {
+      font-size: 2em;
+      margin-right: 2px;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+
+      &.star-filled {
+        color: $star-filled-color;
+      }
+
+      &.star-empty {
+        color: $star-empty-color;
+      }
+    }
+  }
+
+  .button-section {
+    margin: 2em 1em 1em 1em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+}

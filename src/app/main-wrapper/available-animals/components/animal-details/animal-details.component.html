@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="info-section">
+    <div class="left-side">
+      <div class="image">
+        <img *ngIf="!animal.img" src="assets/images/default-dog.jpg" alt="default-animal-image">
+        <img *ngIf="animal.img" [src]="animal.img" alt="animal-image">
+      </div>
+
+      <div class="information">
+        <div class="name-breed">{{ 'ANIMAL_INFO_SECTION.NAME_BREED' | translate: { name: animal.name, breed: animal.breed } }}</div>
+        <hr>
+        <div class="information-container">
+          <div class="information-left-side">
+            <div class="slogan">{{ animal.slogan }}</div>
+            <div class="age">{{ 'ANIMAL_INFO_SECTION.AGE_LABEL' | translate }}: {{ animal.age }} {{ 'ANIMAL_INFO_SECTION.YEARS' | translate }}</div>
+          </div>
+          <div class="information-right-side">
+            <ng-container *ngFor="let star of starsArray; let i = index">
+              <span
+                [ngClass]="{
+                  'star-full': getStarType(i) === 'full',
+                  'star-quarter': getStarType(i) === 'quarter',
+                  'star-half': getStarType(i) === 'half',
+                  'star-three-quarters': getStarType(i) === 'three-quarters',
+                  'star-empty': getStarType(i) === 'empty'
+                }"
+                class="star"
+              >
+                ★
+              </span>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="upper-part">
+        <div class="description-title">
+          {{ 'ANIMAL_INFO_SECTION.DESCRIPTION_TITLE' | translate }}
+        </div>
+        <hr>
+        <div class="description">
+          {{ animal.description }}
+        </div>
+      </div>
+      <div class="bottom-part">
+        <app-styled-button
+          (click)="adoptAnimal()"
+          [btnContent]="'ANIMAL_INFO_SECTION.APPLICATION_FOR_ADOPTION' | translate"
+          [btnStyle]="'rounded background-purple font-white'"
+        ></app-styled-button>
+        <app-styled-button
+          (click)="walkAnimal()"
+          [btnContent]="'ANIMAL_INFO_SECTION.REQUEST_FOR_A_WALK' | translate"
+          [btnStyle]="'rounded background-purple font-white'"
+        ></app-styled-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="comment-section">
+    <div class="comment-section-title">
+      {{ 'ANIMAL_INFO_SECTION.COMMENTS_TITLE' | translate }} <mat-icon (click)="onAddCommentButtonClicked()">{{ 'ANIMAL_INFO_SECTION.ADD_COMMENT' | translate }}</mat-icon>
+    </div>
+
+    <div *ngIf="animal.comments.length === 0" class="no-comments-message">
+      {{ 'ANIMAL_INFO_SECTION.NO_COMMENTS_MESSAGE' | translate }}
+    </div>
+
+    <div *ngIf="animal.comments.length > 0" class="comments-wrapper">
+      <div class="comments" *ngFor="let comment of animal.comments">
+        <app-comment-card class="comment" (emitOnCommentChange)="onCommentChange()" [animal]="animal" [comment]="comment"></app-comment-card>
+      </div>
+    </div>
+  </div>
+</div>

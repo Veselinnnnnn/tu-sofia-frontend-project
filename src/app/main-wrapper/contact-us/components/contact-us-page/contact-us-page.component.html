@@ -1,0 +1,84 @@
+<div class="contact-container">
+  <h1>{{ 'CONTACT_PAGE.TITLE' | translate }}</h1>
+  <p>{{ 'CONTACT_PAGE.INTRO' | translate }}</p>
+
+  <h2>{{ 'CONTACT_PAGE.CONTACT_INFO' | translate }}</h2>
+  <p><strong>{{ 'CONTACT_PAGE.ADDRESS' | translate }}</strong></p>
+  <p>{{ 'CONTACT_PAGE.SHELTER_NAME' | translate }}</p>
+  <p>{{ 'CONTACT_PAGE.ADDRESS_LINE_1' | translate }}</p>
+  <p>{{ 'CONTACT_PAGE.ADDRESS_LINE_2' | translate }}</p>
+
+  <p><strong>{{ 'CONTACT_PAGE.PHONE' | translate }}</strong> (123) 456-7890</p>
+  <p><strong>{{ 'CONTACT_PAGE.EMAIL' | translate }}</strong> {{ 'info@yoursheltername.org' }}</p>
+
+  <h2>{{ 'CONTACT_PAGE.BUSINESS_HOURS' | translate }}</h2>
+  <p><strong>{{ 'CONTACT_PAGE.HOURS_WEEKDAY' | translate }}</strong></p>
+  <p><strong>{{ 'CONTACT_PAGE.HOURS_SATURDAY' | translate }}</strong></p>
+  <p><strong>{{ 'CONTACT_PAGE.HOURS_SUNDAY' | translate }}</strong></p>
+
+  <h2>{{ 'CONTACT_PAGE.CONTACT_FORM' | translate }}</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'CONTACT_PAGE.NAME' | translate }}</mat-label>
+      <mat-icon matPrefix>person</mat-icon>
+      <input matInput formControlName="name" required />
+      <mat-error *ngIf="contactForm.get('name')?.hasError('required')">
+        {{ 'CONTACT_PAGE.NAME_REQUIRED' | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'CONTACT_PAGE.EMAIL_LABEL' | translate }}</mat-label>
+      <mat-icon matPrefix>email</mat-icon>
+      <input matInput formControlName="email" required email />
+      <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
+        {{ 'CONTACT_PAGE.EMAIL_REQUIRED' | translate }}
+      </mat-error>
+      <mat-error *ngIf="contactForm.get('email')?.hasError('email')">
+        {{ 'CONTACT_PAGE.EMAIL_INVALID' | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'CONTACT_PAGE.PHONE_OPTIONAL' | translate }}</mat-label>
+      <mat-icon matPrefix>phone</mat-icon>
+      <input matInput formControlName="phone" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'CONTACT_PAGE.SUBJECT' | translate }}</mat-label>
+      <mat-icon matPrefix>subject</mat-icon>
+      <mat-select formControlName="subject">
+        <mat-option value="adoption">{{ 'CONTACT_PAGE.FAQ_Q1' | translate }}</mat-option>
+        <mat-option value="volunteer">{{ 'CONTACT_PAGE.FAQ_Q2' | translate }}</mat-option>
+        <mat-option value="donations">{{ 'CONTACT_PAGE.FAQ_Q3' | translate }}</mat-option>
+        <mat-option value="general">{{ 'CONTACT_PAGE.FAQ_Q1' | translate }}</mat-option>
+        <mat-option value="other">{{ 'CONTACT_PAGE.FAQ_Q2' | translate }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{ 'CONTACT_PAGE.MESSAGE' | translate }}</mat-label>
+      <mat-icon matPrefix>message</mat-icon>
+      <textarea matInput formControlName="message" rows="1" required></textarea>
+      <mat-error *ngIf="contactForm.get('message')?.hasError('required')">
+        {{ 'CONTACT_PAGE.MESSAGE_REQUIRED' | translate }}
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">
+      {{ 'CONTACT_PAGE.SEND_MESSAGE' | translate }}
+    </button>
+  </form>
+
+  <h2>{{ 'CONTACT_PAGE.SOCIAL_MEDIA' | translate }}</h2>
+  <p>{{ 'CONTACT_PAGE.SOCIAL_MEDIA_DESC' | translate }}</p>
+
+  <h2>{{ 'CONTACT_PAGE.FAQ' | translate }}</h2>
+  <p>{{ 'CONTACT_PAGE.FAQ_Q1' | translate }}</p>
+  <p>{{ 'CONTACT_PAGE.FAQ_A1' | translate }}</p>
+  <p>{{ 'CONTACT_PAGE.FAQ_Q2' | translate }}</p>
+  <p>{{ 'CONTACT_PAGE.FAQ_A2' | translate }}</p>
+  <p>{{ 'CONTACT_PAGE.FAQ_Q3' | translate }}</p>
+  <p>{{ 'CONTACT_PAGE.FAQ_A3' | translate }}</p>
+</div>

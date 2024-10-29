@@ -1,0 +1,57 @@
+<div class="about-us-container">
+  <section class="hero-about">
+    <img src="assets/images/about-us-hero.png" alt="{{ 'ABOUT_US_PAGE.HERO.IMAGE_ALT' | translate }}" class="hero-image">
+    <div class="hero-text">
+      <h1>{{ 'ABOUT_US_PAGE.HERO.TITLE' | translate }}</h1>
+      <p>{{ 'ABOUT_US_PAGE.HERO.DESCRIPTION' | translate }}</p>
+    </div>
+  </section>
+
+  <section class="our-story">
+    <h2>{{ 'ABOUT_US_PAGE.OUR_STORY.TITLE' | translate }}</h2>
+    <p>{{ 'ABOUT_US_PAGE.OUR_STORY.DESCRIPTION' | translate }}</p>
+  </section>
+
+  <section class="meet-the-team">
+    <h2>{{ 'ABOUT_US_PAGE.MEET_THE_TEAM.TITLE' | translate }}</h2>
+    <div class="team-cards">
+      <div class="team-card" *ngFor="let user of users">
+        <img [src]="user.img" alt="{{ 'ABOUT_US_PAGE.MEET_THE_TEAM.TEAM_MEMBER_IMAGE_ALT' | translate }}" class="team-image">
+        <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+        <p>{{ user.title }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-impact">
+    <h2>{{ 'ABOUT_US_PAGE.OUR_IMPACT.TITLE' | translate }}</h2>
+    <p>{{ 'ABOUT_US_PAGE.OUR_IMPACT.DESCRIPTION' | translate }}</p>
+    <div class="impact-stats">
+      <div class="stat">
+        <h3>2,000+</h3>
+        <p>{{ 'ABOUT_US_PAGE.OUR_IMPACT.STATS.ANIMALS_RESCUED' | translate }}</p>
+      </div>
+      <div class="stat">
+        <h3>1,500+</h3>
+        <p>{{ 'ABOUT_US_PAGE.OUR_IMPACT.STATS.ADOPTIONS_COMPLETED' | translate }}</p>
+      </div>
+      <div class="stat">
+        <h3>500+</h3>
+        <p>{{ 'ABOUT_US_PAGE.OUR_IMPACT.STATS.VOLUNTEERS' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="partnerships">
+    <h2>{{ 'ABOUT_US_PAGE.PARTNERSHIPS.TITLE' | translate }}</h2>
+    <p>{{ 'ABOUT_US_PAGE.PARTNERSHIPS.DESCRIPTION' | translate }}</p>
+    <div class="partner-logos">
+      <img src="assets/images/fourPaws.png" alt="{{ 'ABOUT_US_PAGE.PARTNERSHIPS.PARTNER_LOGO_ALT' | translate }}">
+      <img src="assets/images/cocacola.png" alt="{{ 'ABOUT_US_PAGE.PARTNERSHIPS.PARTNER_LOGO_ALT' | translate }}">
+      <img src="assets/images/unicredit.png" alt="{{ 'ABOUT_US_PAGE.PARTNERSHIPS.PARTNER_LOGO_ALT' | translate }}">
+      <img src="assets/images/bankq.jfif" alt="{{ 'ABOUT_US_PAGE.PARTNERSHIPS.PARTNER_LOGO_ALT' | translate }}">
+      <img src="assets/images/pepsi.png" alt="{{ 'ABOUT_US_PAGE.PARTNERSHIPS.PARTNER_LOGO_ALT' | translate }}">
+      <img src="assets/images/tesla.png" alt="{{ 'ABOUT_US_PAGE.PARTNERSHIPS.PARTNER_LOGO_ALT' | translate }}">
+    </div>
+  </section>
+</div>

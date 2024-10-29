@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card-wrapper">
+    <div *ngIf="isAdmin" class="admin-card" (click)="openAddAnimalModal()">
+      <div class="card">
+        <div class="card-content">
+          <h2>+</h2>
+          <p>{{ 'ANIMAL_VIEW_CARD.ADD_ANIMAL' | translate }}</p>
+        </div>
+      </div>
+    </div>
+
+    <app-animal-card *ngFor="let animal of animals | paginate: { itemsPerPage: pageSize, currentPage: page, totalItems: totalElements }"
+                     [miniDescription]="animal.description"
+                     [nameOnHover]="animal.name"
+                     [img]="animal.img"
+                     [textOnHover]="animal.slogan"
+                     [age]="animal.age"
+                     [id]="animal.id"
+                     [breed]="animal.breed"
+                     [type]="animal.type"
+                     (refreshDateEvent)="paginatedAnimals()">
+    </app-animal-card>
+  </div>
+
+  <mat-paginator [length]="totalElements"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="[5, 10, 25, 100]"
+                 (page)="onPageChange($event)"
+                 #paginator>
+  </mat-paginator>
+</div>

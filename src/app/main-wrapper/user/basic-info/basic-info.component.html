@@ -1,0 +1,70 @@
+<div class="user-info-wrapper">
+  <div class="user-info-card">
+    <div class="card-header">
+      <h2>{{ 'USER_BASIC_INFO.TITLE' | translate }}</h2>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-row">
+          <div class="form-group form-group-long">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>{{ 'USER_BASIC_INFO.USERNAME' | translate }}</mat-label>
+              <mat-icon matPrefix class="gray-icon">person</mat-icon>
+              <input matInput id="username" formControlName="username" type="text" />
+            </mat-form-field>
+          </div>
+
+          <div class="form-group form-group-long">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>{{ 'USER_BASIC_INFO.ROLE' | translate }}</mat-label>
+              <mat-icon matPrefix class="gray-icon">supervisor_account</mat-icon>
+              <input matInput id="role" formControlName="role" type="text" />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group form-group-long">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>{{ 'USER_BASIC_INFO.FIRST_NAME' | translate }}</mat-label>
+              <mat-icon matPrefix class="gray-icon">badge</mat-icon>
+              <input matInput id="firstName" formControlName="firstName" type="text" />
+            </mat-form-field>
+          </div>
+
+          <div class="form-group form-group-long">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>{{ 'USER_BASIC_INFO.LAST_NAME' | translate }}</mat-label>
+              <mat-icon matPrefix class="gray-icon">badge</mat-icon>
+              <input matInput id="lastName" formControlName="lastName" type="text" />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group full-width">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>{{ 'USER_BASIC_INFO.EMAIL' | translate }}</mat-label>
+              <mat-icon matPrefix class="gray-icon">email</mat-icon>
+              <input matInput id="email" formControlName="email" type="email" />
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full-width">
+            <mat-form-field appearance="outline" class="full-width">
+              <mat-label>{{ 'USER_BASIC_INFO.PASSWORD' | translate }}</mat-label>
+              <mat-icon matPrefix class="gray-icon">lock</mat-icon>
+              <input matInput id="password" formControlName="password" type="password" />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button mat-raised-button color="primary" type="submit" class="btn-submit">{{ 'USER_BASIC_INFO.UPDATE_INFORMATION' | translate }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

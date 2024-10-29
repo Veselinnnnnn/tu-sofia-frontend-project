@@ -1,0 +1,131 @@
+<div class="user-advanced-info-wrapper">
+  <div class="user-advanced-info-card">
+    <div class="card-header">
+      <h2>{{ 'USER_ADVANCED_INFO.TITLE' | translate }}</h2>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-section">
+          <h3>{{ 'USER_ADVANCED_INFO.CONTACT_INFO' | translate }}</h3>
+          <div class="form-row">
+            <div class="big-form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'USER_ADVANCED_INFO.PHONE_NUMBER' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">phone</mat-icon>
+                <input matInput formControlName="phoneNumber" type="text" class="bigger-inputs" />
+              </mat-form-field>
+            </div>
+            <div class="big-form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'USER_ADVANCED_INFO.ADDRESS' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">home</mat-icon>
+                <input matInput formControlName="address" type="text" class="bigger-inputs" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'USER_ADVANCED_INFO.CITY' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">location_city</mat-icon>
+                <input matInput formControlName="city" type="text" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'USER_ADVANCED_INFO.STATE' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">map</mat-icon>
+                <input matInput formControlName="state" type="text" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'USER_ADVANCED_INFO.POSTAL_CODE' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">postal_mail</mat-icon>
+                <input matInput formControlName="postalCode" type="text" />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'USER_ADVANCED_INFO.COUNTRY' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">public</mat-icon>
+                <input matInput formControlName="country" type="text" />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+
+        <!-- Household Information Section -->
+        <div class="form-section">
+          <h3>{{ 'USER_ADVANCED_INFO.HOUSEHOLD_INFO' | translate }}</h3>
+          <div class="form-row">
+            <div class="big-form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'USER_ADVANCED_INFO.HOUSEHOLD_TYPE' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">groups</mat-icon>
+                <input matInput formControlName="householdType" type="text" class="bigger-inputs" />
+              </mat-form-field>
+            </div>
+            <div class="big-form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'USER_ADVANCED_INFO.EMPLOYMENT_STATUS' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">work</mat-icon>
+                <input matInput formControlName="employmentStatus" type="text" class="bigger-inputs" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group-checkbox-group">
+              <mat-checkbox formControlName="hasPreviousExperienceWithPets">{{ 'USER_ADVANCED_INFO.HAS_PREVIOUS_EXPERIENCE' | translate }}</mat-checkbox>
+            </div>
+            <div class="form-group-checkbox-group">
+              <mat-checkbox formControlName="hasOtherPets">{{ 'USER_ADVANCED_INFO.HAS_OTHER_PETS' | translate }}</mat-checkbox>
+            </div>
+            <div class="form-group-checkbox-group">
+              <mat-checkbox formControlName="hasChildren">{{ 'USER_ADVANCED_INFO.HAS_CHILDREN' | translate }}</mat-checkbox>
+            </div>
+            <div class="form-group-checkbox-group">
+              <mat-checkbox formControlName="hasFencedYard">{{ 'USER_ADVANCED_INFO.HAS_FENCED_YARD' | translate }}</mat-checkbox>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adoption Details Section -->
+        <div class="form-section">
+          <h3>{{ 'USER_ADVANCED_INFO.ADOPTION_DETAILS' | translate }}</h3>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'USER_ADVANCED_INFO.REASON_FOR_ADOPTION' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">assignment</mat-icon>
+                <textarea matInput formControlName="reasonForAdoption"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="big-form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'USER_ADVANCED_INFO.REFERENCE_CONTACT' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">contact_phone</mat-icon>
+                <input matInput formControlName="referenceContact" type="text" class="bigger-inputs" />
+              </mat-form-field>
+            </div>
+            <div class="big-form-group">
+              <mat-form-field appearance="outline">
+                <mat-label>{{ 'USER_ADVANCED_INFO.BACKGROUND_CHECK_STATUS' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">check_circle</mat-icon>
+                <input matInput formControlName="backgroundCheckStatus" type="text" class="bigger-inputs" />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-actions">
+          <button mat-raised-button type="submit" class="btn-submit">{{ 'USER_ADVANCED_INFO.UPDATE_INFORMATION' | translate }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

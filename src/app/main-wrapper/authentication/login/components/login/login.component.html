@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="form-wrapper">
+    <h1>{{ 'SIGN_IN.TITLE' | translate }}</h1>
+    <form [formGroup]="form">
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'SIGN_IN.EMAIL' | translate }}</mat-label>
+        <mat-icon matPrefix>email</mat-icon>
+        <input matInput type="email" formControlName="email">
+        <mat-error *ngIf="form.get('email')?.hasError('required') && isFormSubmitted">
+          {{ 'SIGN_IN.EMAIL_REQUIRED' | translate }}
+        </mat-error>
+        <mat-error *ngIf="form.get('email')?.hasError('email') && isFormSubmitted">
+          {{ 'SIGN_IN.EMAIL_INVALID' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'SIGN_IN.PASSWORD' | translate }}</mat-label>
+        <mat-icon matPrefix>lock</mat-icon>
+        <input matInput type="password" formControlName="password">
+        <mat-error *ngIf="form.get('password')?.hasError('required') && isFormSubmitted">
+          {{ 'SIGN_IN.PASSWORD_REQUIRED' | translate }}
+        </mat-error>
+      </mat-form-field>
+    </form>
+
+    <div class="button">
+      <button mat-raised-button color="primary" (click)="submit()" [disabled]="form.invalid">
+        {{ 'SIGN_IN.SUBMIT' | translate }}
+      </button>
+    </div>
+
+    <div class="text">
+      <p>{{ 'SIGN_IN.FORGOT_PASSWORD' | translate }} <a routerLink="/authentication/forgot-password">{{ 'SIGN_IN.PASSWORD' | translate }}</a>?</p>
+      <p>{{ 'SIGN_IN.NO_ACCOUNT' | translate }} <a routerLink="/authentication/register">{{ 'SIGN_IN.SIGN_UP' | translate }}</a></p>
+    </div>
+  </div>
+</div>

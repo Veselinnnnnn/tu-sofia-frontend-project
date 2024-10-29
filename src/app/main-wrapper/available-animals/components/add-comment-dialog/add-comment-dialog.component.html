@@ -1,0 +1,47 @@
+<div class="container" [formGroup]="commentForm">
+  <h2 mat-dialog-title>{{ 'ADD_COMMENT.TITLE' | translate }}</h2>
+  <mat-dialog-content>
+    <textarea matInput
+              formControlName="content"
+              cdkTextareaAutosize
+              cdkAutosizeMinRows="4"
+              cdkAutosizeMaxRows="10"
+              placeholder="{{ 'ADD_COMMENT.PLACEHOLDER' | translate }}">
+    </textarea>
+    <div *ngIf="commentForm.get('content')?.invalid && commentForm.get('content')?.touched" class="error-message">
+      {{ 'ADD_COMMENT.CONTENT_REQUIRED' | translate }}
+    </div>
+  </mat-dialog-content>
+  <div class="star-container">
+    <ng-container *ngFor="let star of starsArray; let i = index">
+      <span
+        class="star"
+        [ngClass]="{
+          'star-filled': i < (hoveredRating || selectedRating ?? 0),
+          'star-empty': i >= (hoveredRating || selectedRating ?? 0)
+        }"
+        (mouseenter)="setHoveredRating(i + 1)"
+        (mouseleave)="resetHoveredRating()"
+        (click)="setRating(i + 1)"
+      >
+        ★
+      </span>
+    </ng-container>
+    <div *ngIf="commentForm.get('rating')?.invalid && commentForm.get('rating')?.touched" class="error-message">
+      {{ 'ADD_COMMENT.RATING_REQUIRED' | translate }}
+    </div>
+  </div>
+  <div class="button-section">
+    <app-styled-button
+      (click)="cancel()"
+      [btnContent]="'ADD_COMMENT.CANCEL' | translate"
+      [btnStyle]="'rounded background-purple font-white'"
+    ></app-styled-button>
+    <app-styled-button
+      (click)="submit()"
+      [btnContent]="editModeEnabled ? ('ADD_COMMENT.SAVE' | translate) : ('ADD_COMMENT.ADD_COMMENT' | translate)"
+      [btnStyle]="'rounded background-purple font-white'"
+      [disabled]="commentForm.invalid"
+    ></app-styled-button>
+  </div>
+</div>

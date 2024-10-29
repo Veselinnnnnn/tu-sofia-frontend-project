@@ -1,0 +1,193 @@
+<div class="user-info-wrapper">
+  <div class="user-info-card">
+    <div class="card-header">
+      <h2>{{ 'REQUEST_ADOPTION.REVIEW_APPLICATION' | translate }}</h2>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="adoptionForm" (ngSubmit)="onSubmit()">
+
+        <div *ngIf="isLoading" class="loader">
+          <mat-spinner></mat-spinner>
+        </div>
+
+        <div class="form-section">
+          <h3><strong>{{ 'REQUEST_ADOPTION.PERSONAL_INFORMATION' | translate }}</strong></h3>
+          <div class="form-row">
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.FIRST_NAME' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">person</mat-icon>
+                <input matInput formControlName="firstName" type="text" />
+              </mat-form-field>
+            </div>
+
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.LAST_NAME' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">person</mat-icon>
+                <input matInput formControlName="lastName" type="text" />
+              </mat-form-field>
+            </div>
+
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.EMAIL' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">email</mat-icon>
+                <input matInput formControlName="email" type="email" />
+              </mat-form-field>
+            </div>
+
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.PHONE_NUMBER' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">phone</mat-icon>
+                <input matInput formControlName="phoneNumber" type="tel" />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <div class="form-section">
+          <h3><strong>{{ 'REQUEST_ADOPTION.CONTACT_INFORMATION' | translate }}</strong></h3>
+          <div class="form-row">
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.ADDRESS' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">home</mat-icon>
+                <input matInput formControlName="address" type="text" />
+              </mat-form-field>
+            </div>
+
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.CITY' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">location_city</mat-icon>
+                <input matInput formControlName="city" type="text" />
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.STATE' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">map</mat-icon>
+                <input matInput formControlName="state" type="text" />
+              </mat-form-field>
+            </div>
+
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.POSTAL_CODE' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">pin_drop</mat-icon>
+                <input matInput formControlName="postalCode" type="text" />
+              </mat-form-field>
+            </div>
+
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.COUNTRY' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">public</mat-icon>
+                <input matInput formControlName="country" type="text" />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <div class="form-section">
+          <h3><strong>{{ 'REQUEST_ADOPTION.PET_ADOPTION_DETAILS' | translate }}</strong></h3>
+
+          <div class="form-row">
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.ANIMAL_NAME' | translate }}</mat-label>
+                <mat-select formControlName="animalId">
+                  <mat-option *ngFor="let animal of animals" [value]="animal.id">
+                    {{ animal.name }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.REASON_FOR_ADOPTION' | translate }}</mat-label>
+                <textarea matInput formControlName="reasonForAdoption"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+
+        <hr class="section-divider" />
+
+        <div class="form-section">
+          <h3><strong>{{ 'REQUEST_ADOPTION.ADDITIONAL_INFORMATION' | translate }}</strong></h3>
+
+          <div class="form-row">
+            <div class="form-group form-group-long">
+              <mat-checkbox formControlName="hasPreviousExperienceWithPets">
+                {{ 'REQUEST_ADOPTION.HAS_PREVIOUS_EXPERIENCE' | translate }}
+              </mat-checkbox>
+            </div>
+
+            <div class="form-group form-group-long">
+              <mat-checkbox formControlName="hasOtherPets">
+                {{ 'REQUEST_ADOPTION.HAS_OTHER_PETS' | translate }}
+              </mat-checkbox>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group form-group-long">
+              <mat-checkbox formControlName="hasChildren">
+                {{ 'REQUEST_ADOPTION.HAS_CHILDREN' | translate }}
+              </mat-checkbox>
+            </div>
+
+            <div class="form-group form-group-long">
+              <mat-checkbox formControlName="hasFencedYard">
+                {{ 'REQUEST_ADOPTION.HAS_FENCED_YARD' | translate }}
+              </mat-checkbox>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.REFERENCE_CONTACT' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">contact_phone</mat-icon>
+                <input matInput formControlName="referenceContact" type="text" />
+              </mat-form-field>
+            </div>
+
+            <div class="form-group form-group-long">
+              <mat-form-field appearance="outline" class="full-width">
+                <mat-label>{{ 'REQUEST_ADOPTION.BACKGROUND_CHECK_STATUS' | translate }}</mat-label>
+                <mat-icon matPrefix class="gray-icon">assignment</mat-icon>
+                <input matInput formControlName="backgroundCheckStatus" type="text" />
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button mat-button style="background: red; color: white" type="button" (click)="onCancel()">
+            {{ 'REQUEST_ADOPTION.CANCEL' | translate }}
+          </button>
+          <button *ngIf="!isEditMode" mat-raised-button color="primary" type="submit">
+            {{ 'REQUEST_ADOPTION.SUBMIT' | translate }}
+          </button>
+          <button *ngIf="isEditMode" mat-raised-button color="primary" type="submit">
+            {{ 'REQUEST_ADOPTION.UPDATE' | translate }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

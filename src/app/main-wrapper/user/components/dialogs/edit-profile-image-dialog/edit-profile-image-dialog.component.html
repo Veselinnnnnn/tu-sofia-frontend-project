@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 mat-dialog-title>{{ 'CHANGE_PROFILE_PICTURE.TITLE' | translate }}</h1>
+  <div mat-dialog-content>
+    <input type="file" (change)="onFileChange($event)" accept="image/*" />
+    <div *ngIf="selectedImage">
+      <img [src]="selectedImage" alt="{{ 'CHANGE_PROFILE_PICTURE.PREVIEW' | translate }}" style="max-width: 100%;" />
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSave()">{{ 'CHANGE_PROFILE_PICTURE.SAVE' | translate }}</button>
+    <button mat-raised-button color="warn" (click)="onCancel()">{{ 'CHANGE_PROFILE_PICTURE.CANCEL' | translate }}</button>
+  </div>
+</div>

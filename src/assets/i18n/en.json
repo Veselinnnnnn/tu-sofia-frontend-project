@@ -1,0 +1,412 @@
+{
+  "NAVIGATION": {
+    "HOME": "Home",
+    "ABOUT_US": "About Us",
+    "GALLERY": "Gallery",
+    "APPLICATIONS": "Applications",
+    "CONTACT_US": "Contact Us",
+    "EVENTS": "Events",
+    "TESTIMONIALS": "Testimonials"
+  },
+  "LANGUAGE": {
+    "TITLE": "Language",
+    "ENGLISH": "English",
+    "BULGARIAN": "Bulgarian",
+    "FRENCH": "French"
+  },
+  "BUTTONS": {
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "AVAILABLE_ANIMALS": "Available Animals!!"
+  },
+  "SETTINGS": {
+    "TITLE": "Settings"
+  },
+  "HERO": {
+    "TITLE": "Find Your Furry Friend",
+    "DESCRIPTION": "Adopt a pet today and make a difference in their life. Discover our animals looking for loving homes.",
+    "ADOPT_NOW": "Adopt Now",
+    "BOOK_WALK": "Book a walk",
+    "IMAGE_ALT": "Happy Dog"
+  },
+  "ABOUT_US": {
+    "TITLE": "About Us",
+    "DESCRIPTION": "We are a dedicated animal shelter working to find loving homes for pets in need. Our mission is to provide a safe haven for animals and help them find their forever families. We offer a range of services, including pet adoption, walking, and volunteer opportunities."
+  },
+  "FEATURED_PETS": {
+    "TITLE": "Featured Pets",
+    "IMAGE_ALT": "Featured Pet",
+    "MEET": "Meet",
+    "NO_PETS_MESSAGE": "No animals available at the moment. Please check back later!"
+  },
+  "SERVICES": {
+    "TITLE": "Our Services",
+    "ADOPT_A_PET": "Adopt a Pet",
+    "ADOPT_DESCRIPTION": "Meet our animals and find the perfect companion for your family.",
+    "ANIMAL_WALKS": "Animal Walks",
+    "WALK_DESCRIPTION": "Join us for fun walks and socialization sessions with our animals.",
+    "VOLUNTEER_OPPORTUNITIES": "Volunteer Opportunities",
+    "VOLUNTEER_DESCRIPTION": "Help us care for our animals and support our shelter through volunteering.",
+    "COMING_SOON": "Coming Soon"
+  },
+  "EVENTS": {
+    "TITLE": "Upcoming Events",
+    "NO_EVENTS": "There are no upcoming events at the moment."
+  },
+  "TESTIMONIALS": {
+    "TITLE": "What People Say",
+    "NO_FEEDBACK": "No testimonials yet.",
+    "LEAVE_FEEDBACK": "Leave a Feedback",
+    "SEE_MORE": "See More"
+  },
+  "DONATE": {
+    "TITLE": "Support Our Shelter",
+    "DESCRIPTION": "Your donations help us continue our mission of caring for animals in need. Consider making a contribution to support our work.",
+    "GOAL": "Help Us Reach Our Goal",
+    "OF": "of",
+    "GOAL_REACHED": "goal reached",
+    "DONATE_NOW": "Donate Now"
+  },
+  "FOOTER": {
+    "DEVELOPED_BY": "Developed by Veselin Petranchev © 2024",
+    "POWERED_BY": "Powered by Spring and Angular"
+  },
+  "ABOUT_US_PAGE": {
+    "HERO": {
+      "TITLE": "Our Mission",
+      "DESCRIPTION": "Our mission is to provide a safe haven for animals and help them find loving homes. We believe every pet deserves a second chance and are committed to supporting their health, happiness, and well-being.",
+      "IMAGE_ALT": "Animal Shelter"
+    },
+    "OUR_STORY": {
+      "TITLE": "Our Story",
+      "DESCRIPTION": "Founded in 2010, our shelter began with a passion for helping stray and abandoned animals. Over the years, we have grown into a full-fledged shelter, rescuing hundreds of animals each year and placing them into caring homes."
+    },
+    "MEET_THE_TEAM": {
+      "TITLE": "Meet the Team",
+      "TEAM_MEMBER_IMAGE_ALT": "Team Member"
+    },
+    "OUR_IMPACT": {
+      "TITLE": "Our Impact",
+      "DESCRIPTION": "Since our inception, we have rescued over 2,000 animals and facilitated more than 1,500 adoptions. We work with a dedicated team of volunteers and partner organizations to make a difference in the lives of animals every day.",
+      "STATS": {
+        "ANIMALS_RESCUED": "Animals Rescued",
+        "ADOPTIONS_COMPLETED": "Adoptions Completed",
+        "VOLUNTEERS": "Volunteers"
+      }
+    },
+    "PARTNERSHIPS": {
+      "TITLE": "Our Partnerships",
+      "DESCRIPTION": "We are proud to partner with various organizations and local businesses to enhance our services and outreach. Together, we are building a stronger community for both people and pets.",
+      "PARTNER_LOGO_ALT": "Logo"
+    }
+  },
+  "APPLICATIONS_TABLE": {
+    "TITLE": "Applications Table",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "DATE": "Date",
+    "ANIMAL_ID": "Animal ID",
+    "PICK_UP_TIME": "Pick-Up Time",
+    "RETURN_TIME": "Return Time",
+    "REQUEST_TYPE": "Request Type",
+    "STATUS": "Status",
+    "ACTION": "Action",
+    "NONE": "NONE"
+  },
+  "REVIEW_APPLICATION": {
+    "TITLE": "Review Application",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "REQUEST_TYPE": "Request Type",
+    "STATUS": "Status",
+    "ANIMAL": "Animal",
+    "PICK_UP_TIME": "Pick Up Time",
+    "RETURN_TIME": "Return Time",
+    "DATE": "Date",
+    "APPROVE": "Approve",
+    "DECLINE": "Decline"
+  },
+  "FORGOT_PASSWORD": {
+    "TITLE": "Reset Password",
+    "EMAIL": "Email",
+    "EMAIL_PLACEHOLDER": "Enter your email",
+    "EMAIL_REQUIRED": "Email is required.",
+    "EMAIL_INVALID": "Please enter a valid email address.",
+    "SEND_RESET_LINK": "Send Reset Link",
+    "REMEMBER_PASSWORD": "Remember your password?",
+    "SIGN_IN": "Sign In",
+    "NO_ACCOUNT": "Don't have an account?",
+    "SIGN_UP": "Sign Up"
+  },
+  "SIGN_IN": {
+    "TITLE": "Sign In",
+    "EMAIL": "Email",
+    "EMAIL_REQUIRED": "Email is required",
+    "EMAIL_INVALID": "Invalid email format",
+    "PASSWORD": "Password",
+    "PASSWORD_REQUIRED": "Password is required",
+    "SUBMIT": "Submit",
+    "FORGOT_PASSWORD": "Forgot",
+    "NO_ACCOUNT": "Don't have an account?",
+    "SIGN_UP": "Sign Up"
+  },
+  "SIGN_UP": {
+    "TITLE": "Sign Up",
+    "USERNAME": "Username",
+    "USERNAME_REQUIRED": "Username is required!",
+    "FIRST_NAME": "First Name",
+    "FIRST_NAME_REQUIRED": "First Name is required!",
+    "LAST_NAME": "Last Name",
+    "LAST_NAME_REQUIRED": "Last Name is required!",
+    "EMAIL": "Email",
+    "EMAIL_REQUIRED": "Email is required!",
+    "EMAIL_INVALID": "Enter a valid email!",
+    "PASSWORD": "Password",
+    "PASSWORD_REQUIRED": "Password is required!",
+    "SUBMIT": "Submit",
+    "ALREADY_ACCOUNT": "Already have an account?",
+    "SIGN_IN": "Sign in"
+  },
+  "RESET_PASSWORD": {
+    "TITLE": "Reset Password",
+    "NEW_PASSWORD": "New Password",
+    "NEW_PASSWORD_REQUIRED": "Password is required.",
+    "NEW_PASSWORD_MIN_LENGTH": "Password must be at least 6 characters long.",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "CONFIRM_PASSWORD_REQUIRED": "Confirm Password is required.",
+    "PASSWORDS_MUST_MATCH": "Passwords must match.",
+    "NEW_PASSWORD_PLACEHOLDER": "Enter new password",
+    "CONFIRM_PASSWORD_PLACEHOLDER": "Confirm new password",
+    "RESET_PASSWORD": "Reset Password",
+    "REMEMBER_PASSWORD": "Remember your password?",
+    "SIGN_IN": "Sign In"
+  },
+  "ADD_COMMENT": {
+    "TITLE": "Add Comment",
+    "PLACEHOLDER": "Write your comment here",
+    "CONTENT_REQUIRED": "Comment is required.",
+    "RATING_REQUIRED": "Rating is required.",
+    "CANCEL": "CANCEL",
+    "SAVE": "SAVE",
+    "ADD_COMMENT": "ADD COMMENT"
+  },
+  "ANIMAL_CARD": {
+    "AGE": "AGE",
+    "YEARS": "YEARS",
+    "READ_MORE": "READ MORE",
+    "SEE_MORE": "... see more",
+    "EDIT": "Edit",
+    "DELETE": "Delete"
+  },
+  "ANIMAL_INFO_SECTION": {
+    "NAME_BREED": "{{ name }} - {{ breed }}",
+    "AGE_LABEL": "AGE",
+    "YEARS": "YEARS",
+    "DESCRIPTION_TITLE": "Description",
+    "NO_COMMENTS_MESSAGE": "There are no comments for this animal yet.",
+    "APPLICATION_FOR_ADOPTION": "APPLICATION FOR ADOPTION",
+    "REQUEST_FOR_A_WALK": "REQUEST FOR A WALK",
+    "COMMENTS_TITLE": "Comments",
+    "ADD_COMMENT": "Add Comment"
+  },
+  "COMMENT_SECTION": {
+    "EDIT": "Edit",
+    "DELETE": "Delete",
+    "LIKES": "Likes",
+    "DISLIKES": "Dislikes"
+  },
+  "ANIMAL_FORM": {
+    "TITLE_ADD": "Add Animal",
+    "TITLE_EDIT": "Edit Animal",
+    "LABELS": {
+      "NAME": "Name",
+      "TYPE": "Type",
+      "BREED": "Breed",
+      "AGE": "Age",
+      "DESCRIPTION": "Description",
+      "SLOGAN": "Slogan",
+      "IMAGE": "Image",
+      "IMAGE_PREVIEW": "Image Preview"
+    },
+    "ERRORS": {
+      "REQUIRED": "{field} is required.",
+      "AGE_MIN": "Age must be a positive number."
+    },
+    "BUTTONS": {
+      "CANCEL": "Cancel",
+      "ADD": "Add",
+      "UPDATE": "Update"
+    }
+  },
+  "REQUEST_ADOPTION": {
+    "REVIEW_APPLICATION": "Review Application",
+    "PERSONAL_INFORMATION": "Personal Information",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "EMAIL": "Email",
+    "PHONE_NUMBER": "Phone Number",
+    "CONTACT_INFORMATION": "Contact Information",
+    "ADDRESS": "Address",
+    "CITY": "City",
+    "STATE": "State",
+    "POSTAL_CODE": "Postal Code",
+    "COUNTRY": "Country",
+    "PET_ADOPTION_DETAILS": "Pet Adoption Details",
+    "ANIMAL_NAME": "Animal Name",
+    "REASON_FOR_ADOPTION": "Reason for Adoption",
+    "ADDITIONAL_INFORMATION": "Additional Information",
+    "HAS_PREVIOUS_EXPERIENCE": "Has Previous Experience with Pets",
+    "HAS_OTHER_PETS": "Has Other Pets",
+    "HAS_CHILDREN": "Has Children",
+    "HAS_FENCED_YARD": "Has Fenced Yard",
+    "REFERENCE_CONTACT": "Reference Contact",
+    "BACKGROUND_CHECK_STATUS": "Background Check Status",
+    "CANCEL": "Cancel",
+    "SUBMIT": "Submit",
+    "UPDATE": "Update"
+  },
+  "REQUEST_WALK": {
+    "REQUEST_A_WALK": "Request a Walk with Our Pets",
+    "FILL_OUT_FORM": "Fill out the form below to schedule a walk with one of our wonderful pets.",
+    "YOUR_NAME": "Your Name",
+    "YOUR_EMAIL": "Your Email",
+    "CHOOSE_A_DATE": "Choose a date",
+    "PICK_UP_TIME": "4:00 PM",
+    "SELECT_ANIMAL": "Select an Animal",
+    "RETURNING_TIME": "Returning Time",
+    "CANCEL": "Cancel",
+    "SUBMIT": "Submit",
+    "UPDATE": "Update"
+  },
+  "ANIMAL_VIEW_CARD": {
+    "ADD_ANIMAL": "Add Animal",
+    "SELECT_PAGE": "Select page"
+  },
+  "CONTACT_PAGE": {
+    "TITLE": "Get in Touch with Us",
+    "INTRO": "We’re here to help! Whether you’re looking to adopt, volunteer, or just have a question, feel free to reach out. Our team is eager to assist you.",
+    "CONTACT_INFO": "Contact Information",
+    "ADDRESS": "Address:",
+    "SHELTER_NAME": "Animal Shelter",
+    "ADDRESS_LINE_1": "1234 Paws Avenue, Suite 101",
+    "ADDRESS_LINE_2": "Your City, Your State, ZIP Code",
+    "PHONE": "Phone:",
+    "EMAIL": "Email:",
+    "BUSINESS_HOURS": "Business Hours",
+    "HOURS_WEEKDAY": "Monday - Friday: 9:00 AM - 6:00 PM",
+    "HOURS_SATURDAY": "Saturday: 10:00 AM - 4:00 PM",
+    "HOURS_SUNDAY": "Sunday: Closed",
+    "CONTACT_FORM": "Contact Form",
+    "NAME": "Name",
+    "NAME_REQUIRED": "Name is required",
+    "EMAIL_LABEL": "Email",
+    "EMAIL_REQUIRED": "Email is required",
+    "EMAIL_INVALID": "Please enter a valid email",
+    "PHONE_OPTIONAL": "Phone (optional)",
+    "SUBJECT": "Subject",
+    "MESSAGE": "Message",
+    "MESSAGE_REQUIRED": "Message is required",
+    "SEND_MESSAGE": "Send Message",
+    "SOCIAL_MEDIA": "Social Media",
+    "SOCIAL_MEDIA_DESC": "Follow us on social media to stay updated on our latest news, events, and adorable animals ready for adoption!",
+    "FAQ": "Frequently Asked Questions",
+    "FAQ_Q1": "How can I adopt an animal?",
+    "FAQ_A1": "Visit our adoption page for detailed information on the process.",
+    "FAQ_Q2": "Can I volunteer at the shelter?",
+    "FAQ_A2": "Absolutely! Check our volunteering page to learn how to get involved.",
+    "FAQ_Q3": "How can I donate?",
+    "FAQ_A3": "Donations can be made through our donation page, or you can contact us directly."
+  },
+  "EVENTS_VIEW": {
+    "UPCOMING_EVENTS": "Upcoming Events",
+    "CREATE_EDIT_EVENT": "Create / Edit Event",
+    "EVENT_TITLE": "Event Title",
+    "EVENT_DESCRIPTION": "Event Description",
+    "EVENT_DATE": "Event Date",
+    "TITLE_REQUIRED": "Title is required",
+    "DESCRIPTION_REQUIRED": "Description is required",
+    "DATE_TIME_REQUIRED": "Date and Time is required",
+    "ADD_EVENT": "Add Event",
+    "UPDATE_EVENT": "Update Event",
+    "PAST_EVENTS": "Past Events",
+    "DATE_TIME": "Date and Time",
+    "EDIT": "Edit",
+    "DELETE": "Delete"
+  },
+  "GALLERY_VIEW": {
+    "TITLE": "Our Animal Gallery",
+    "DESCRIPTION": "Explore the photos of our wonderful animals. Each one is waiting for a loving home. See their personalities shine through!",
+    "ADOPTABLE_PETS_GALLERY": "Adoptable Pets Gallery",
+    "ANIMAL_NAME_DESCRIPTION": "{{name}} - {{description}}",
+    "PAGINATOR_LABEL": "Select page"
+  },
+  "DONATION_DIALOG": {
+    "TITLE": "Support Our Shelter",
+    "DESCRIPTION": "Enter the amount you would like to donate and help us reach our goal!",
+    "DONATION_AMOUNT_LABEL": "Donation Amount",
+    "DONATION_AMOUNT_PLACEHOLDER": "Enter amount",
+    "CANCEL_BUTTON": "Cancel",
+    "PAYPAL_BUTTON": "Pay with PayPal",
+    "PAYPAL_TOOLTIP": "Coming Soon!"
+  },
+  "FEEDBACK_DIALOG": {
+    "TITLE": "Leave Your Feedback",
+    "FEEDBACK_LABEL": "Feedback Message",
+    "FEEDBACK_ERROR": "Feedback message is required.",
+    "CANCEL_BUTTON": "Cancel",
+    "UPDATE_BUTTON": "Update",
+    "SUBMIT_BUTTON": "Submit"
+  },
+  "TESTIMONIAL_PAGE": {
+    "TITLE": "All Feedbacks",
+    "NO_FEEDBACKS": "No feedbacks available.",
+    "GO_BACK_BUTTON": "Go Back",
+    "EDIT_BUTTON": "Edit",
+    "DELETE_BUTTON": "Delete"
+  },
+  "USER_ADVANCED_INFO": {
+    "TITLE": "User Advanced Information",
+    "CONTACT_INFO": "Contact Information",
+    "PHONE_NUMBER": "Phone Number",
+    "ADDRESS": "Address",
+    "CITY": "City",
+    "STATE": "State",
+    "POSTAL_CODE": "Postal Code",
+    "COUNTRY": "Country",
+    "HOUSEHOLD_INFO": "Household Information",
+    "HOUSEHOLD_TYPE": "Household Type",
+    "EMPLOYMENT_STATUS": "Employment Status",
+    "HAS_PREVIOUS_EXPERIENCE": "Has Previous Experience With Pets",
+    "HAS_OTHER_PETS": "Has Other Pets",
+    "HAS_CHILDREN": "Has Children",
+    "HAS_FENCED_YARD": "Has Fenced Yard",
+    "ADOPTION_DETAILS": "Adoption Details",
+    "REASON_FOR_ADOPTION": "Reason for Adoption",
+    "REFERENCE_CONTACT": "Reference Contact",
+    "BACKGROUND_CHECK_STATUS": "Background Check Status",
+    "UPDATE_INFORMATION": "Update Information"
+  },
+  "USER_BASIC_INFO": {
+    "TITLE": "User Basic Information",
+    "USERNAME": "Username",
+    "ROLE": "Role",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "UPDATE_INFORMATION": "Update Information"
+  },
+  "CHANGE_PROFILE_PICTURE": {
+    "TITLE": "Change Profile Picture",
+    "SELECT_IMAGE": "Select an image file",
+    "PREVIEW": "Preview",
+    "SAVE": "Save",
+    "CANCEL": "Cancel"
+  },
+  "USER_PROFILE": {
+    "PROFILE_IMAGE_ALT": "Profile image",
+    "EDIT_PROFILE": "Edit",
+    "BASIC_INFO": "Basic Info",
+    "ADVANCED_INFO": "Advanced Info"
+  }
+}

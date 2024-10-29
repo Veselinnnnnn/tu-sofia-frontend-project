@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+
+<div class="gallery-container">
+  <div class="hero">
+    <div class="hero-content">
+      <h1>{{ 'GALLERY_VIEW.TITLE' | translate }}</h1>
+      <p>{{ 'GALLERY_VIEW.DESCRIPTION' | translate }}</p>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <section class="gallery">
+      <h2>{{ 'GALLERY_VIEW.ADOPTABLE_PETS_GALLERY' | translate }}</h2>
+      <div class="gallery-grid">
+        <div *ngFor="let animal of animals" class="gallery-item" (click)="navigateToAnimalDetails(animal)">
+          <img [src]="animal.img" alt="{{animal.name}}" class="gallery-image">
+          <div class="gallery-caption">{{ 'GALLERY_VIEW.ANIMAL_NAME_DESCRIPTION' | translate: { name: animal.name, description: animal.description } }}</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <mat-paginator [length]="totalElements"
+                 [pageSize]="pageSize"
+                 [pageSizeOptions]="[5, 10, 25, 100]"
+                 (page)="onPageChange($event)"
+                 #paginator>
+  </mat-paginator>
+</div>
+
+<app-footer></app-footer>

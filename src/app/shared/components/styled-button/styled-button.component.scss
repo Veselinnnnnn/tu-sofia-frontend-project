@@ -1,0 +1,57 @@
+button {
+  border-radius: 0.5em;
+  border: none;
+  box-shadow: 0 0 5px black;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+
+  &:hover {
+    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+  }
+
+  &:active {
+    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+    transform: translateY(4px);
+  }
+
+  img {
+    width: 1em;
+  }
+}
+
+.background-blue {
+  background: #0772fc;
+}
+
+.background-facebook-blue {
+  background: #4267B2;
+}
+
+.background-white {
+  background: white;
+}
+
+.background-purple {
+  background: #CF6CB3;
+}
+
+.font-white {
+  color: white
+}
+
+.font-gray {
+  color: gray;
+}
+
+.small-button {
+  transform: scale(0.85);
+}
+
+.rounded {
+  border-radius: 25px;
+}

@@ -1,0 +1,59 @@
+<h2 mat-dialog-title>{{ 'REQUEST_WALK.REQUEST_A_WALK' | translate }}</h2>
+<div mat-dialog-content>
+  <p>{{ 'REQUEST_WALK.FILL_OUT_FORM' | translate }}</p>
+
+  <div *ngIf="isLoading" class="loader">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <form [formGroup]="walkForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>{{ 'REQUEST_WALK.YOUR_NAME' | translate }}</mat-label>
+      <input matInput formControlName="name" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>{{ 'REQUEST_WALK.YOUR_EMAIL' | translate }}</mat-label>
+      <input matInput formControlName="email" type="email" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>{{ 'REQUEST_WALK.CHOOSE_A_DATE' | translate }}</mat-label>
+      <input matInput formControlName="date" [matDatepicker]="picker">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             name="selected_time_A"
+             formControlName="pickUpTime"
+             [ngxMatTimepicker]="pickerA"
+             placeholder="{{ 'REQUEST_WALK.PICK_UP_TIME' | translate }}"
+             readonly />
+      <mat-icon matSuffix (click)="pickerA.open()">
+        watch_later
+      </mat-icon>
+    </mat-form-field>
+    <ngx-mat-timepicker #pickerA dottedMinutesInGap enableKeyboardInput></ngx-mat-timepicker>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>{{ 'REQUEST_WALK.SELECT_ANIMAL' | translate }}</mat-label>
+      <mat-select formControlName="animalId" required>
+        <mat-option *ngFor="let animal of animals" [value]="animal.id">{{ animal.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>{{ 'REQUEST_WALK.RETURNING_TIME' | translate }}</mat-label>
+      <input matInput formControlName="returnTime" type="time" [disabled]="true">
+    </mat-form-field>
+
+    <div mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>{{ 'REQUEST_WALK.CANCEL' | translate }}</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!walkForm.valid">
+        {{ editMode ? ('REQUEST_WALK.UPDATE' | translate) : ('REQUEST_WALK.SUBMIT' | translate) }}
+      </button>
+    </div>
+  </form>
+</div>

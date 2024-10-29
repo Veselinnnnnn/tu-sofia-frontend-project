@@ -1,0 +1,33 @@
+<nav class="container">
+  <a routerLink="/home" class="logo"><img src="./assets/images/logo.png" alt="logo"></a>
+
+  <div class="nav">
+    <a routerLink="/home" routerLinkActive="active">{{ 'NAVIGATION.HOME' | translate }}</a>
+    <a routerLink="/about-us" routerLinkActive="active">{{ 'NAVIGATION.ABOUT_US' | translate }}</a>
+    <a routerLink="/gallery" routerLinkActive="active">{{ 'NAVIGATION.GALLERY' | translate }}</a>
+    <a routerLink="/applications" routerLinkActive="active">{{ 'NAVIGATION.APPLICATIONS' | translate }}</a>
+    <a routerLink="/contact-us" routerLinkActive="active">{{ 'NAVIGATION.CONTACT_US' | translate }}</a>
+    <a routerLink="/events" routerLinkActive="active">{{ 'NAVIGATION.EVENTS' | translate }}</a>
+    <a routerLink="/testimonials" routerLinkActive="active">{{ 'NAVIGATION.TESTIMONIALS' | translate }}</a>
+  </div>
+
+  <div class="buttons">
+    <app-styled-button
+      (click)="navigateToAvailableAnimals()"
+      [btnContent]="'BUTTONS.AVAILABLE_ANIMALS' | translate"
+      [btnStyle]="'rounded background-purple font-white'"
+    ></app-styled-button>
+    <a routerLink="/user" routerLinkActive="active">
+      <mat-icon>person</mat-icon>
+    </a>
+    <button mat-icon-button [matMenuTriggerFor]="settingsMenu">
+      <mat-icon>settings</mat-icon>
+    </button>
+    <mat-menu #settingsMenu="matMenu">
+      <button mat-menu-item (click)="openLanguageSettings()">
+        <mat-icon>language</mat-icon>
+        <span>{{ 'LANGUAGE.TITLE' | translate }}</span>
+      </button>
+    </mat-menu>
+  </div>
+</nav>

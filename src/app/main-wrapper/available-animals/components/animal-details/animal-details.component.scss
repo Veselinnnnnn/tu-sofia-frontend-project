@@ -1,0 +1,230 @@
+$star-filled-color: gold;
+$star-empty-color: #ddd;
+
+.container {
+  background: linear-gradient(45deg, rgba(0, 184, 255, 0.1) 0%, rgba(0, 255, 209, 0.1) 53%, rgba(0, 235, 70, 0.1) 80%, rgba(198, 255, 0, 0.1) 100%);
+  width: 100%;
+  min-height: calc(100% - 89px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+
+  .info-section {
+    width: 100%;
+    padding-top: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+
+    .left-side {
+      background: white;
+      width: 30%;
+      min-height: 550px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+
+      .image {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        overflow: hidden;
+
+        img {
+          max-height: 400px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .information {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1.5em;
+        gap: 1em;
+
+        .name-breed {
+          margin: auto;
+          font-weight: bold;
+          font-size: 2em;
+        }
+
+
+        .information-container {
+          display: flex;
+          justify-content: space-between;
+
+          .information-left-side {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            .age, .slogan {
+              padding-left: 2em;
+              font-size: 1em;
+            }
+          }
+
+          .information-right-side {
+            padding-right: 2em;
+            padding-top: 1.5em;
+
+            .star {
+              font-size: 2em;
+              margin-right: 2px;
+              display: inline-block;
+              position: relative;
+
+              &.star-full {
+                color: $star-filled-color;
+              }
+
+              &.star-empty {
+                color: $star-empty-color;
+              }
+
+              &.star-quarter {
+                color: $star-empty-color;
+                background: linear-gradient(to right, $star-filled-color 35%, $star-empty-color 35%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+              }
+
+              &.star-half {
+                color: $star-empty-color;
+                background: linear-gradient(to right, $star-filled-color 50%, $star-empty-color 50%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+              }
+
+              &.star-three-quarters {
+                color: $star-empty-color;
+                background: linear-gradient(to right, $star-filled-color 60%, $star-empty-color 60%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+              }
+            }
+          }
+
+        }
+
+        .name-breed, .age, .slogan {
+          font-family: 'Brush Script MT', cursive;
+        }
+      }
+    }
+
+    .right-side {
+      border-top-right-radius: 15px;
+      width: 30%;
+      min-height: 550px;
+      display: flex;
+      flex-direction: column;
+      gap: 5em;
+
+      .upper-part {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        min-height: 390px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        background: white;
+
+        .description-title {
+
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          background: #eaeaea;
+          align-items: center;
+          text-align: center;
+          padding: 0.75em 0;
+          font-weight: bold;
+          font-size: 2.5em;
+          font-family: 'Brush Script MT', cursive;
+        }
+
+        .description {
+          margin-top: 0.5em;
+          font-size: 1.5em;
+          text-align: justify;
+          padding: 0 2em;
+          font-family: 'Brush Script MT', cursive;
+        }
+      }
+
+      .bottom-part {
+        background: white;
+        height: 90px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+  }
+
+  .comment-section {
+    width: 63.5%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    background: white;
+    margin-bottom: 5em;
+
+    .comment-section-title {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      background: #eaeaea;
+      align-items: center;
+      text-align: start;
+      padding: 0.75em 0 0.75em 1em;
+      font-weight: bold;
+      font-size: 2.5em;
+      font-family: 'Brush Script MT', cursive;
+
+      mat-icon {
+        cursor: pointer;
+      }
+    }
+
+    .no-comments-message {
+      width: 100%;
+      text-align: center;
+      font-size: 1.5em;
+      font-family: 'Brush Script MT', cursive;
+      margin: 1em 0;
+    }
+
+    .comments-wrapper {
+      width: 100%;
+
+      .comments {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        width: 100%;
+
+        .comment {
+          width: 95%;
+          font-size: 1.5em;
+          font-family: 'Brush Script MT', cursive;
+        }
+      }
+    }
+  }
+}

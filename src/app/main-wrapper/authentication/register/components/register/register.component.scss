@@ -1,0 +1,54 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, rgba(255,239,240,1) 0%, rgba(212,241,244,1) 25%, rgba(227,216,242,1) 100%);
+
+
+  .form-wrapper {
+    background: #fff;
+    padding: 1.5em;
+    box-shadow: 0 0 10px -5px black;
+    width: 25%;
+
+    h1 {
+      font-family: sans-serif;
+      font-size: 2em;
+    }
+
+    form {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+
+      mat-form-field {
+        width: 100%;
+
+        input {
+          height: 20px;
+        }
+      }
+    }
+
+    .button {
+      margin-top: 1em;
+      display: flex;
+      justify-content: center;
+    }
+
+    .text {
+      font-family: sans-serif;
+      font-size: 0.9em;
+      margin-top: 1em;
+      text-align: center;
+
+      a {
+        font-size: 1.1em;
+        color: deepskyblue;
+        text-decoration: none;
+      }
+    }
+  }
+}

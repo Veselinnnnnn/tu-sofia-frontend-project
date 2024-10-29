@@ -1,0 +1,195 @@
+.about-us-container {
+  background: linear-gradient(45deg, rgba(255,239,240,1) 0%, rgba(212,241,244,1) 25%, rgba(227,216,242,1) 100%);
+  width: 100%;
+  .hero-about {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+
+    .hero-image {
+      width: 30em;
+      height: 30em;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adds shadow */
+    }
+
+    .hero-text {
+      width: 40%;
+      text-align: center;
+      color: black;
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5em;
+        font-family: 'Pacifico', cursive;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .our-story {
+    width: 95%;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  .meet-the-team {
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .team-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .team-card {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        .team-image {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          margin-top: 15px;
+          color: #333;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #777;
+        }
+      }
+    }
+  }
+
+  .our-impact {
+    width: 95%;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .impact-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+
+      .stat {
+        background-color: #f3f3f3;
+        padding: 20px;
+        border-radius: 8px;
+        width: 150px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          font-size: 2rem;
+          color: #fb83d9;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #666;
+        }
+      }
+    }
+  }
+
+  .partnerships {
+    width: 97%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10em;
+
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .partner-logos {
+      padding: 20px 0;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      img {
+        width: 150px;
+        height: auto;
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<div class="event-wrapper">
+  <mat-toolbar color="primary">
+    <span>{{ 'EVENTS_VIEW.UPCOMING_EVENTS' | translate }}</span>
+  </mat-toolbar>
+
+  <h2 *ngIf="isAdmin">{{ 'EVENTS_VIEW.CREATE_EDIT_EVENT' | translate }}</h2>
+
+  <mat-card *ngIf="isAdmin">
+    <form [formGroup]="eventForm" (ngSubmit)="editMode ? updateEvent() : createEvent()">
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'EVENTS_VIEW.EVENT_TITLE' | translate }}</mat-label>
+        <input matInput formControlName="title" placeholder="{{ 'EVENTS_VIEW.EVENT_TITLE' | translate }}" [errorStateMatcher]="errorMatcher">
+        <mat-error *ngIf="errorMatcher.isErrorState(eventForm.get('title'), null)">
+          {{ 'EVENTS_VIEW.TITLE_REQUIRED' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'EVENTS_VIEW.EVENT_DESCRIPTION' | translate }}</mat-label>
+        <textarea matInput formControlName="description" placeholder="{{ 'EVENTS_VIEW.EVENT_DESCRIPTION' | translate }}" rows="5" [errorStateMatcher]="errorMatcher"></textarea>
+        <mat-error *ngIf="errorMatcher.isErrorState(eventForm.get('description'), null)">
+          {{ 'EVENTS_VIEW.DESCRIPTION_REQUIRED' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>{{ 'EVENTS_VIEW.EVENT_DATE' | translate }}</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dateTime" [errorStateMatcher]="errorMatcher">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="errorMatcher.isErrorState(eventForm.get('dateTime'), null)">
+          {{ 'EVENTS_VIEW.DATE_TIME_REQUIRED' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary">{{ editMode ? ('EVENTS_VIEW.UPDATE_EVENT' | translate) : ('EVENTS_VIEW.ADD_EVENT' | translate) }}</button>
+    </form>
+  </mat-card>
+
+  <mat-tab-group>
+    <mat-tab label="{{ 'EVENTS_VIEW.UPCOMING_EVENTS' | translate }}">
+      <h2>{{ 'EVENTS_VIEW.UPCOMING_EVENTS' | translate }}</h2>
+      <div class="event-list">
+        <mat-card *ngFor="let event of events" class="event-item">
+          <h3>{{ event.title }}</h3>
+          <p class="event-description">{{ event.description }}</p>
+          <p class="event-date"><strong>{{ 'EVENTS_VIEW.DATE_TIME' | translate }}: </strong>{{ event.dateTime | date:'short' }}</p>
+          <ng-container *ngIf="isAdmin">
+            <button mat-button color="accent" (click)="editEvent(event)">{{ 'EVENTS_VIEW.EDIT' | translate }}</button>
+            <button mat-button color="warn" (click)="deleteEvent(event.id!)">{{ 'EVENTS_VIEW.DELETE' | translate }}</button>
+          </ng-container>
+        </mat-card>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="{{ 'EVENTS_VIEW.PAST_EVENTS' | translate }}">
+      <h2>{{ 'EVENTS_VIEW.PAST_EVENTS' | translate }}</h2>
+      <div class="event-list">
+        <mat-card *ngFor="let event of pastEvents" class="event-item">
+          <h3>{{ event.title }}</h3>
+          <p class="event-description">{{ event.description }}</p>
+          <p class="event-date"><strong>{{ 'EVENTS_VIEW.DATE_TIME' | translate }}: </strong>{{ event.dateTime | date:'short' }}</p>
+          <ng-container *ngIf="isAdmin">
+            <button mat-button color="accent" (click)="editEvent(event)">{{ 'EVENTS_VIEW.EDIT' | translate }}</button>
+            <button mat-button color="warn" (click)="deleteEvent(event.id!)">{{ 'EVENTS_VIEW.DELETE' | translate }}</button>
+          </ng-container>
+        </mat-card>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="image">
+    <img *ngIf="!img" src="assets/images/default-dog.jpg" alt="default-animal-image">
+    <img *ngIf="img" [src]="img" alt="animal-image">
+    <div class="overlay">
+      <div class="text-container">
+        <div class="name">{{ nameOnHover }}</div>
+        <div class="hover-description">{{ textOnHover }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="description">
+    <div class="age">{{ 'ANIMAL_CARD.AGE' | translate }}: {{ age }} {{ 'ANIMAL_CARD.YEARS' | translate }}</div>
+    <div class="breed">{{ breed }}</div>
+    <div class="mini-description" #miniDescription>
+      {{ truncatedMiniDescription }}
+      <span class="see-more" (click)="navigateToAnimalDetails()">{{ 'ANIMAL_CARD.SEE_MORE' | translate }}</span>
+    </div>
+
+    <div class="action-row">
+      <app-styled-button
+        (click)="navigateToAnimalDetails()"
+        [btnContent]="'ANIMAL_CARD.READ_MORE' | translate"
+        [btnStyle]="'rounded background-purple font-white'"
+      ></app-styled-button>
+
+      <div *ngIf="isAdmin" class="dropdown" (click)="toggleDropdown()">
+        <span class="three-dots">⋮</span>
+        <div *ngIf="isDropdownOpen" class="dropdown-menu">
+          <button (click)="editAnimal()" class="dropdown-item">
+            <mat-icon>edit</mat-icon> {{ 'ANIMAL_CARD.EDIT' | translate }}
+          </button>
+          <button (click)="deleteAnimal()" class="dropdown-item">
+            <mat-icon>delete</mat-icon> {{ 'ANIMAL_CARD.DELETE' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

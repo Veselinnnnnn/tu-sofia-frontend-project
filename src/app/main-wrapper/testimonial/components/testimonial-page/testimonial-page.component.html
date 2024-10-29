@@ -1,0 +1,31 @@
+<div class="testimonial-page">
+  <mat-toolbar color="primary">
+    <span>{{ 'TESTIMONIAL_PAGE.TITLE' | translate }}</span>
+  </mat-toolbar>
+
+  <div class="testimonial-list-wrapper">
+    <div *ngIf="testimonials.length === 0" class="no-testimonials-yet">
+      <p>{{ 'TESTIMONIAL_PAGE.NO_FEEDBACKS' | translate }}</p>
+    </div>
+
+    <div *ngIf="testimonials.length > 0" class="testimonial-list">
+      <p *ngFor="let testimonial of testimonials">
+        <mat-card>
+          <mat-card-content class="testimonial-card">
+            <p>"{{ testimonial.message }}" - {{ getUserDisplayName(testimonial.user!) }} | {{ testimonial.createdAt | date:'short' }}</p>
+            <div class="icon-buttons" *ngIf="isUserTestimonial(testimonial)">
+              <button mat-icon-button (click)="openEditDialog(testimonial)">
+                <mat-icon>{{ 'TESTIMONIAL_PAGE.EDIT_BUTTON' | translate }}</mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteTestimonial(testimonial.id!)">
+                <mat-icon>{{ 'TESTIMONIAL_PAGE.DELETE_BUTTON' | translate }}</mat-icon>
+              </button>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </p>
+    </div>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="navigateBack()">{{ 'TESTIMONIAL_PAGE.GO_BACK_BUTTON' | translate }}</button>
+</div>

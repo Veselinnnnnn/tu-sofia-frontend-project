@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  box-shadow: 0 0 30px gray;
+  position: fixed;
+  display: flex;
+  background: white;
+  justify-content: space-between;
+
+  .logo {
+    margin-top: 0.75em;
+    margin-left: 2em;
+
+    img {
+      width: 3.5em;
+    }
+  }
+
+  .nav {
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: gray;
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+
+    a.active {
+      color: black;
+      border-bottom: 3px solid #CF6CB3;
+    }
+
+    a {
+      padding: 1.5em 1em 0 1em;
+      color: #333;
+      text-decoration: none;
+
+      &:hover {
+        color: black;
+        border-bottom: 3px solid #CF6CB3;
+      }
+    }
+  }
+
+  .buttons {
+    font-size: 1em;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: gray;
+    display: flex;
+    align-items: stretch;
+    margin: 0;
+
+    app-styled-button {
+      margin-top: 0.7em;
+      margin-right: 1em;
+    }
+
+    button {
+      padding: 0.9em 0;
+      color: #333;
+      text-decoration: none;
+    }
+
+    a.active {
+      color: black;
+      border-bottom: 3px solid #CF6CB3;
+    }
+
+    a {
+      padding: 1.5em 1em 0 1em;
+      color: #333;
+      text-decoration: none;
+
+      &:hover {
+        color: black;
+        border-bottom: 3px solid #CF6CB3;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.container {
+  background: linear-gradient(45deg, rgba(255,239,240,1) 0%, rgba(212,241,244,1) 25%, rgba(227,216,242,1) 100%);
+  width: 100%;
+  min-height: calc(100% - 89px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .card-wrapper {
+    margin-top: 10em;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+
+    app-animal-card {
+      height: 400px;
+      width: 250px;
+    }
+  }
+
+  mat-paginator {
+    margin: 2em;
+    background: none;
+  };
+
+  .admin-card {
+    height: 400px; /* Match the height of existing animal cards */
+    width: 250px; /* Match the width of existing animal cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white for visibility */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    cursor: pointer; /* Indicate clickable */
+    transition: transform 0.2s; /* Smooth scale effect on hover */
+  }
+
+  .admin-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+
+  .card-content {
+    text-align: center;
+    color: #333; /* Text color */
+  }
+
+  .card-content h2 {
+    font-size: 3em; /* Size of the plus sign */
+    margin: 0; /* Remove default margin */
+  }
+
+  .card-content p {
+    margin-top: 0.5em; /* Space between plus and text */
+    font-size: 1.2em; /* Size of the text */
+  }
+
+
+}

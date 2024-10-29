@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="form-wrapper">
+    <h1>{{ 'SIGN_UP.TITLE' | translate }}</h1>
+    <form [formGroup]="form">
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'SIGN_UP.USERNAME' | translate }}</mat-label>
+        <mat-icon matPrefix>person</mat-icon>
+        <input matInput formControlName="username">
+        <mat-error *ngIf="form.get('username')?.hasError('required') && isFormSubmitted">
+          {{ 'SIGN_UP.USERNAME_REQUIRED' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'SIGN_UP.FIRST_NAME' | translate }}</mat-label>
+        <mat-icon matPrefix>face</mat-icon>
+        <input matInput formControlName="firstName">
+        <mat-error *ngIf="form.get('firstName')?.hasError('required') && isFormSubmitted">
+          {{ 'SIGN_UP.FIRST_NAME_REQUIRED' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'SIGN_UP.LAST_NAME' | translate }}</mat-label>
+        <mat-icon matPrefix>face</mat-icon>
+        <input matInput formControlName="lastName">
+        <mat-error *ngIf="form.get('lastName')?.hasError('required') && isFormSubmitted">
+          {{ 'SIGN_UP.LAST_NAME_REQUIRED' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'SIGN_UP.EMAIL' | translate }}</mat-label>
+        <mat-icon matPrefix>email</mat-icon>
+        <input matInput type="email" formControlName="email">
+        <mat-error *ngIf="form.get('email')?.hasError('required') && isFormSubmitted">
+          {{ 'SIGN_UP.EMAIL_REQUIRED' | translate }}
+        </mat-error>
+        <mat-error *ngIf="form.get('email')?.hasError('email') && isFormSubmitted">
+          {{ 'SIGN_UP.EMAIL_INVALID' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>{{ 'SIGN_UP.PASSWORD' | translate }}</mat-label>
+        <mat-icon matPrefix>lock</mat-icon>
+        <input matInput type="password" formControlName="password">
+        <mat-error *ngIf="form.get('password')?.hasError('required') && isFormSubmitted">
+          {{ 'SIGN_UP.PASSWORD_REQUIRED' | translate }}
+        </mat-error>
+      </mat-form-field>
+
+      <div class="button">
+        <button mat-raised-button color="primary" (click)="submit()" [disabled]="form.invalid">
+          {{ 'SIGN_UP.SUBMIT' | translate }}
+        </button>
+      </div>
+
+      <div class="text">
+        <p>{{ 'SIGN_UP.ALREADY_ACCOUNT' | translate }} <a routerLink="/authentication/login">{{ 'SIGN_UP.SIGN_IN' | translate }}</a></p>
+      </div>
+    </form>
+  </div>
+</div>

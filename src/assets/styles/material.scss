@@ -1,0 +1,32 @@
+.mdc-text-field {
+  background-color: transparent !important;
+}
+
+.mat-mdc-snack-bar-container {
+  &.success-snackbar {
+    --mdc-snackbar-container-color: #17642F;
+  }
+
+  &.error-snackbar {
+    --mdc-snackbar-container-color: #f44336;
+  }
+}
+
+.mat-mdc-row:nth-child(even){
+  background-color: #f6f5f5;
+
+  &:hover {
+    background-color: #c1d4ff;
+    cursor: pointer;
+
+  }
+}
+
+.mat-mdc-row:nth-child(odd){
+  background-color: #e6e6e6;
+
+  &:hover {
+    background-color: #c1d4ff;
+    cursor: pointer;
+  }
+}

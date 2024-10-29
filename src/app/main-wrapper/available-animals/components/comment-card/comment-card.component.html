@@ -1,0 +1,35 @@
+<div class="comment-container">
+  <div class="comment-header">
+    <span class="username">{{ comment.username }} </span>
+    <span class="created-at">
+      <mat-icon *ngIf="comment.userId == userId" (click)="onEditComment()">
+        {{ 'COMMENT_SECTION.EDIT' | translate }}
+      </mat-icon>
+      <mat-icon class="delete" *ngIf="comment.userId == userId" (click)="onDeleteComment()">
+        {{ 'COMMENT_SECTION.DELETE' | translate }}
+      </mat-icon>
+      {{ comment.createdAt | date:'short' }}
+    </span>
+  </div>
+  <p class="comment-content">{{ comment.content }}</p>
+  <div class="comment-footer">
+    <div class="rating">
+      <ng-container *ngFor="let star of starsArray; let i = index">
+        <span
+          [ngClass]="{'star-filled': i < comment.rating, 'star-empty': i >= comment.rating}"
+          class="star"
+        >
+          ★
+        </span>
+      </ng-container>
+    </div>
+    <span class="likes" [ngClass]="{'active': comment.currentUserReactionType === 'LIKE'}">
+      <mat-icon class="icon" (click)="onLikeClick(comment.id)">thumb_up</mat-icon>
+      <span class="number">{{ comment.likes }} {{ 'COMMENT_SECTION.LIKES' | translate }}</span>
+    </span>
+    <span class="dislikes" [ngClass]="{'active': comment.currentUserReactionType === 'DISLIKE'}">
+      <mat-icon class="icon" (click)="onDislikeClick(comment.id)">thumb_down</mat-icon>
+      <span class="number">{{ comment.dislikes }} {{ 'COMMENT_SECTION.DISLIKES' | translate }}</span>
+    </span>
+  </div>
+</div>

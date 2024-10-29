@@ -1,0 +1,26 @@
+<app-nav></app-nav>
+
+<div class="wrapper-container">
+  <div class="sidebar">
+    <div class="profile-container">
+      <img class="profile-img" [src]="profileImage" [alt]="'USER_PROFILE.PROFILE_IMAGE_ALT' | translate">
+      <div class="overlay"></div>
+      <mat-icon class="edit-icon" (click)="openEditModal()">{{ 'USER_PROFILE.EDIT_PROFILE' | translate }}</mat-icon>
+    </div>
+
+    <h1>{{ name }}</h1>
+
+    <div class="wrapper" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="/user/basic-info">{{ 'USER_PROFILE.BASIC_INFO' | translate }}</a>
+    </div>
+    <div class="wrapper" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a routerLink="/user/advanced-info">{{ 'USER_PROFILE.ADVANCED_INFO' | translate }}</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<app-footer></app-footer>

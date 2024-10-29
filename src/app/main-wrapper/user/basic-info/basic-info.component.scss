@@ -1,0 +1,146 @@
+/* Wrapper */
+.user-info-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  padding: 20px;
+}
+
+/* Card Styling */
+.user-info-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Card Header */
+.card-header {
+  background: linear-gradient(135deg, #CF6CB3 0%, #fb83d9 100%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.gray-icon {
+  color: #999 !important; /* Gray color for icons */
+}
+
+
+/* Card Body */
+.card-body {
+  padding: 30px;
+}
+
+/* Form Row */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+  flex: 1;
+
+  mat-form-field {
+    width: 100%;
+  }
+}
+
+.form-group.full-width {
+  flex: 100%;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #999;
+}
+
+.input-group input {
+  width: 210%;
+  padding: 10px 15px 10px 40px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  background: red !important;
+  transition: all 0.3s ease;
+}
+
+/* Input Focus */
+.input-group input:focus {
+  background-color: #ffffff;
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+
+/* Button Styling */
+.btn-submit {
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(135deg, #fb83d9 0%, #CF6CB3 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover */
+.btn-submit:hover {
+  background: linear-gradient(135deg, #CF6CB3 0%, #bf56a1 100%);
+  transform: translateY(-3px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

@@ -1,0 +1,25 @@
+<h2 mat-dialog-title class="dialog-title">
+  {{ 'FEEDBACK_DIALOG.TITLE' | translate }}
+</h2>
+<form class="feedback-form">
+  <div class="form-field-wrapper">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-icon matPrefix>feedback</mat-icon>
+      <mat-label>{{ 'FEEDBACK_DIALOG.FEEDBACK_LABEL' | translate }}</mat-label>
+      <textarea matInput [(ngModel)]="message" name="message" required rows="1"></textarea>
+      <mat-error *ngIf="message.length === 0" class="error-message">
+        {{ 'FEEDBACK_DIALOG.FEEDBACK_ERROR' | translate }}
+      </mat-error>
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-raised-button color="warn" (click)="onNoClick()">{{ 'FEEDBACK_DIALOG.CANCEL_BUTTON' | translate }}</button>
+    <button *ngIf="isEditMode" mat-raised-button color="primary" type="submit" (click)="submitFeedback()">
+      {{ 'FEEDBACK_DIALOG.UPDATE_BUTTON' | translate }}
+    </button>
+    <button *ngIf="!isEditMode" mat-raised-button color="primary" type="submit" (click)="submitFeedback()">
+      {{ 'FEEDBACK_DIALOG.SUBMIT_BUTTON' | translate }}
+    </button>
+  </div>
+</form>

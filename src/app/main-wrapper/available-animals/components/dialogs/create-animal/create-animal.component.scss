@@ -1,0 +1,23 @@
+.full-width {
+  width: 100%; /* Make form controls full width */
+}
+
+.dialog-title {
+  text-align: center; /* Center the text */
+  width: 100%; /* Ensure it takes full width */
+  margin: 0; /* Remove default margins */
+}
+
+.icon-gray {
+  color: gray; /* Set icon color to gray */
+}
+
+.image-preview-container {
+  margin-top: 16px; /* Add space above the preview */
+  text-align: center; /* Center the preview */
+}
+
+.image-preview {
+  max-width: 100%; /* Ensure the image fits within the container */
+  max-height: 200px; /* Limit height for better layout */
+}

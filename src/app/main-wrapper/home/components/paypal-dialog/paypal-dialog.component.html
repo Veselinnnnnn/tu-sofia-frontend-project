@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>
+  <mat-icon aria-hidden="false" aria-label="Favorite" style="vertical-align: middle; margin-right: 8px;">favorite</mat-icon>
+  {{ 'DONATION_DIALOG.TITLE' | translate }}
+</h2>
+
+<div mat-dialog-content>
+  <p>{{ 'DONATION_DIALOG.DESCRIPTION' | translate }}</p>
+
+  <mat-form-field appearance="outline" class="donate-amount-field">
+    <mat-label>{{ 'DONATION_DIALOG.DONATION_AMOUNT_LABEL' | translate }}</mat-label>
+    <mat-icon matPrefix>attach_money</mat-icon>
+    <input matInput type="number" placeholder="{{ 'DONATION_DIALOG.DONATION_AMOUNT_PLACEHOLDER' | translate }}">
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>{{ 'DONATION_DIALOG.CANCEL_BUTTON' | translate }}</button>
+
+  <button mat-raised-button color="primary" matTooltip="{{ 'DONATION_DIALOG.PAYPAL_TOOLTIP' | translate }}">
+    <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal Logo" width="24" height="16" style="vertical-align:middle; margin-right: 8px;">
+    {{ 'DONATION_DIALOG.PAYPAL_BUTTON' | translate }}
+  </button>
+</div>

@@ -1,0 +1,338 @@
+.container {
+  background: linear-gradient(45deg, rgba(255,239,240,1) 0%, rgba(212,241,244,1) 25%, rgba(227,216,242,1) 100%);
+  position: relative;
+
+  .hero {
+    padding-top: 5em;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    position: relative;
+
+    .hero-image {
+      width: 30em;
+      height: 30em;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adds shadow */
+    }
+
+    .hero-content {
+      text-align: center;
+      color: black;
+      padding: 0 20px;
+
+      .hero-content-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 3em;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5em;
+        line-height: 1.2;
+        font-family: 'Pacifico', cursive;
+      }
+
+      p {
+        font-size: 1.25rem;
+        max-width: 600px;
+        margin: 20px auto;
+      }
+
+      .cta-button {
+        margin-top: 1em;
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 1rem;
+        color: #fff;
+        border: none;
+        background-color: #CF6CB3;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Adds shadow */
+
+        &:hover {
+          background-color: #b55f9c;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    padding: 2.25em 1.25em 8em 1.25em;
+    text-align: center;
+
+    .about-us {
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #666;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+
+    .featured-pets {
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .pet-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .pet-card {
+          background: #ffffff;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          width: 300px;
+          text-align: center;
+          transition: transform 0.3s ease;
+          border: 2px solid #CF6CB3;
+
+          .pet-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+
+          h3 {
+            font-size: 1.5rem;
+            margin: 10px 0;
+            color: #333;
+          }
+
+          p {
+            font-size: 1rem;
+            color: #666;
+          }
+
+          .cta-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            color: #fff;
+            background-color: #CF6CB3;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #b55f9c;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .no-pets-message {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 8px;
+        background-color: white;
+      }
+
+      .no-pets-message p {
+        font-size: 1rem;
+        color: #666;
+      }
+    }
+
+    .services {
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .service-cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .service-card {
+          background: #ffffff;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          width: 300px;
+          text-align: center;
+          transition: transform 0.3s ease;
+          border: 2px solid #CF6CB3;
+
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #CF6CB3;
+          }
+
+          p {
+            font-size: 1rem;
+            color: #666;
+          }
+
+          &:hover {
+            transform: translateY(-5px);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .events {
+      margin-bottom: 40px;
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .event-list {
+        .event-item {
+          background: #ffffff;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          margin-bottom: 20px;
+          text-align: center;
+
+          h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #CF6CB3;
+          }
+
+          p {
+            font-size: 1rem;
+            color: #666;
+          }
+        }
+      }
+    }
+
+    .event-item {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #CF6CB3;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #666;
+      }
+    }
+
+    .testimonial-list-page {
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .testimonial-list {
+        .testimonial-card {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          border-radius: 8px;
+          margin-bottom: 1em;
+
+          .testimonial-item {
+            font-size: 1rem;
+            color: #666;
+            font-style: italic;
+          }
+        }
+      }
+
+      .no-testimonials-yet {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 8px;
+        background-color: white;
+
+        p {
+          font-size: 1rem;
+          color: #666;
+        }
+      }
+
+      .button-group {
+        display: flex;
+        padding-top: 1em;
+        justify-content: center;
+        gap: 1em;
+
+        .see-more-button {
+          background-color: #CF6CB3;
+          color: white;
+        }
+
+        .disabled {
+          background-color: #9eaab5;
+        }
+      }
+
+
+    }
+
+
+    .donate {
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      padding-top: 3em;
+      text-align: center;
+    }
+
+    .donation-progress {
+      margin-top: 20px;
+    }
+
+    mat-progress-bar {
+      width: 100%;
+      height: 20px;
+      margin-bottom: 10px;
+    }
+
+    button.donate-button {
+      margin-top: 20px;
+    }
+  }
+}

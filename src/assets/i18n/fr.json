@@ -1,0 +1,182 @@
+{
+  "NAVIGATION": {
+    "HOME": "Accueil",
+    "ABOUT_US": "À Propos de Nous",
+    "GALLERY": "Galerie",
+    "APPLICATIONS": "Candidatures",
+    "CONTACT_US": "Contactez-Nous",
+    "EVENTS": "Événements",
+    "TESTIMONIALS": "Témoignages"
+  },
+  "LANGUAGE": {
+    "TITLE": "Langue",
+    "ENGLISH": "Anglais",
+    "BULGARIAN": "Bulgare",
+    "FRENCH": "Français"
+  },
+  "BUTTONS": {
+    "SAVE": "Enregistrer",
+    "CANCEL": "Annuler",
+    "AVAILABLE_ANIMALS": "Animaux Disponibles!!"
+  },
+  "SETTINGS": {
+    "TITLE": "Paramètres"
+  },
+  "HERO": {
+    "TITLE": "Trouvez Votre Ami à Fourrure",
+    "DESCRIPTION": "Adoptez un animal aujourd'hui et faites une différence dans sa vie. Découvrez nos animaux à la recherche de foyers aimants.",
+    "ADOPT_NOW": "Adoptez Maintenant",
+    "BOOK_WALK": "Réservez une promenade",
+    "IMAGE_ALT": "Chien Heureux"
+  },
+  "ABOUT_US": {
+    "TITLE": "À Propos de Nous",
+    "DESCRIPTION": "Nous sommes un refuge pour animaux dédié à trouver des foyers aimants pour les animaux dans le besoin. Notre mission est de fournir un havre de paix pour les animaux et de les aider à trouver leur famille pour la vie. Nous offrons une gamme de services, y compris l'adoption d'animaux, les promenades et les opportunités de bénévolat."
+  },
+  "FEATURED_PETS": {
+    "TITLE": "Animaux à l'Honneur",
+    "IMAGE_ALT": "Animal à l'Honneur",
+    "MEET": "Rencontrez",
+    "NO_PETS_MESSAGE": "Aucun animal disponible pour le moment. Veuillez revenir plus tard!"
+  },
+  "SERVICES": {
+    "TITLE": "Nos Services",
+    "ADOPT_A_PET": "Adoptez un Animal",
+    "ADOPT_DESCRIPTION": "Rencontrez nos animaux et trouvez le compagnon idéal pour votre famille.",
+    "ANIMAL_WALKS": "Promenades d'Animaux",
+    "WALK_DESCRIPTION": "Rejoignez-nous pour des promenades amusantes et des séances de socialisation avec nos animaux.",
+    "VOLUNTEER_OPPORTUNITIES": "Opportunités de Bénévolat",
+    "VOLUNTEER_DESCRIPTION": "Aidez-nous à prendre soin de nos animaux et soutenez notre refuge en faisant du bénévolat.",
+    "COMING_SOON": "Bientôt Disponible"
+  },
+  "EVENTS": {
+    "TITLE": "Événements à Venir",
+    "NO_EVENTS": "Il n'y a aucun événement prévu pour le moment."
+  },
+  "TESTIMONIALS": {
+    "TITLE": "Ce Que Les Gens Disent",
+    "NO_FEEDBACK": "Aucun témoignage pour l'instant.",
+    "LEAVE_FEEDBACK": "Laissez un Témoignage",
+    "SEE_MORE": "Voir Plus"
+  },
+  "DONATE": {
+    "TITLE": "Soutenez Notre Refuge",
+    "DESCRIPTION": "Vos dons nous aident à poursuivre notre mission de prendre soin des animaux dans le besoin. Envisagez de faire une contribution pour soutenir notre travail.",
+    "GOAL": "Aidez-Nous à Atteindre Notre Objectif",
+    "OF": "de",
+    "GOAL_REACHED": "objectif atteint",
+    "DONATE_NOW": "Faites un Don Maintenant"
+  },
+  "FOOTER": {
+    "DEVELOPED_BY": "Développé par Veselin Petranchev © 2024",
+    "POWERED_BY": "Propulsé par Spring et Angular"
+  },
+  "ABOUT_US_PAGE": {
+    "HERO": {
+      "TITLE": "Notre Mission",
+      "DESCRIPTION": "Notre mission est de fournir un havre de paix pour les animaux et de les aider à trouver des foyers aimants. Nous croyons que chaque animal mérite une seconde chance et nous nous engageons à soutenir leur santé, leur bonheur et leur bien-être.",
+      "IMAGE_ALT": "Refuge pour Animaux"
+    },
+    "OUR_STORY": {
+      "TITLE": "Notre Histoire",
+      "DESCRIPTION": "Fondé en 2010, notre refuge a commencé avec une passion pour aider les animaux errants et abandonnés. Au fil des années, nous sommes devenus un refuge à part entière, sauvant des centaines d'animaux chaque année et les plaçant dans des foyers aimants."
+    },
+    "MEET_THE_TEAM": {
+      "TITLE": "Rencontrez l'Équipe",
+      "TEAM_MEMBER_IMAGE_ALT": "Membre de l'Équipe"
+    },
+    "OUR_IMPACT": {
+      "TITLE": "Notre Impact",
+      "DESCRIPTION": "Depuis notre création, nous avons sauvé plus de 2 000 animaux et facilité plus de 1 500 adoptions. Nous travaillons avec une équipe dédiée de bénévoles et d'organisations partenaires pour faire une différence dans la vie des animaux chaque jour.",
+      "STATS": {
+        "ANIMALS_RESCUED": "Animaux Sauvés",
+        "ADOPTIONS_COMPLETED": "Adoptions Réalisées",
+        "VOLUNTEERS": "Bénévoles"
+      }
+    },
+    "PARTNERSHIPS": {
+      "TITLE": "Nos Partenariats",
+      "DESCRIPTION": "Nous sommes fiers de nous associer à diverses organisations et entreprises locales pour améliorer nos services et notre portée. Ensemble, nous bâtissons une communauté plus forte pour les personnes et les animaux.",
+      "PARTNER_LOGO_ALT": "Logo"
+    }
+  },
+  "APPLICATIONS_TABLE": {
+    "TITLE": "Tableau des Candidatures",
+    "NAME": "Nom",
+    "EMAIL": "Email",
+    "DATE": "Date",
+    "ANIMAL_ID": "ID de l'Animal",
+    "PICK_UP_TIME": "Heure de Ramassage",
+    "RETURN_TIME": "Heure de Retour",
+    "REQUEST_TYPE": "Type de Demande",
+    "STATUS": "Statut",
+    "ACTION": "Action",
+    "NONE": "Aucun"
+  },
+  "REVIEW_APPLICATION": {
+    "TITLE": "Revoir la Candidature",
+    "NAME": "Nom",
+    "EMAIL": "Email",
+    "REQUEST_TYPE": "Type de Demande",
+    "STATUS": "Statut",
+    "ANIMAL": "Animal",
+    "PICK_UP_TIME": "Heure de Ramassage",
+    "RETURN_TIME": "Heure de Retour",
+    "DATE": "Date",
+    "APPROVE": "Approuver",
+    "DECLINE": "Refuser"
+  },
+  "FORGOT_PASSWORD": {
+    "TITLE": "Réinitialiser le Mot de Passe",
+    "EMAIL": "Email",
+    "EMAIL_PLACEHOLDER": "Entrez votre email",
+    "EMAIL_REQUIRED": "L'email est requis.",
+    "EMAIL_INVALID": "Veuillez entrer une adresse email valide.",
+    "SEND_RESET_LINK": "Envoyer le Lien de Réinitialisation",
+    "REMEMBER_PASSWORD": "Vous vous souvenez de votre mot de passe ?",
+    "SIGN_IN": "Connexion",
+    "NO_ACCOUNT": "Vous n'avez pas de compte ?",
+    "SIGN_UP": "S'inscrire"
+  },
+  "SIGN_IN": {
+    "TITLE": "Connexion",
+    "EMAIL": "Email",
+    "EMAIL_REQUIRED": "L'email est requis",
+    "EMAIL_INVALID": "Format d'email invalide",
+    "PASSWORD": "Mot de Passe",
+    "PASSWORD_REQUIRED": "Le mot de passe est requis",
+    "SUBMIT": "Soumettre",
+    "FORGOT_PASSWORD": "Oublié",
+    "NO_ACCOUNT": "Vous n'avez pas de compte ?",
+    "SIGN_UP": "S'inscrire"
+  },
+  "SIGN_UP": {
+    "TITLE": "S'inscrire",
+    "USERNAME": "Nom d'Utilisateur",
+    "USERNAME_REQUIRED": "Le nom d'utilisateur est requis !",
+    "FIRST_NAME": "Prénom",
+    "FIRST_NAME_REQUIRED": "Le prénom est requis !",
+    "LAST_NAME": "Nom de Famille",
+    "LAST_NAME_REQUIRED": "Le nom de famille est requis !",
+    "EMAIL": "Email",
+    "EMAIL_REQUIRED": "L'email est requis !",
+    "EMAIL_INVALID": "Entrez un email valide !",
+    "PASSWORD": "Mot de Passe",
+    "PASSWORD_REQUIRED": "Le mot de passe est requis !",
+    "SUBMIT": "Soumettre",
+    "ALREADY_ACCOUNT": "Vous avez déjà un compte ?",
+    "SIGN_IN": "Connexion"
+  },
+  "RESET_PASSWORD": {
+    "TITLE": "Réinitialiser le Mot de Passe",
+    "NEW_PASSWORD": "Nouveau Mot de Passe",
+    "NEW_PASSWORD_REQUIRED": "Le mot de passe est requis.",
+    "NEW_PASSWORD_MIN_LENGTH": "Le mot de passe doit comporter au moins 6 caractères.",
+    "CONFIRM_PASSWORD": "Confirmer le Mot de Passe",
+    "CONFIRM_PASSWORD_REQUIRED": "La confirmation du mot de passe est requise.",
+    "PASSWORDS_MUST_MATCH": "Les mots de passe doivent correspondre.",
+    "NEW_PASSWORD_PLACEHOLDER": "Entrez le nouveau mot de passe",
+    "CONFIRM_PASSWORD_PLACEHOLDER": "Confirmez le nouveau mot de passe",
+    "SUBMIT": "Réinitialiser le Mot de Passe"
+  }
+}

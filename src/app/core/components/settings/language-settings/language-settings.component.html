@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>{{ 'LANGUAGE.TITLE' | translate }}</h1>
+<div mat-dialog-content>
+  <mat-radio-group [(ngModel)]="selectedLanguage" (change)="onLanguageChange($event.value)">
+    <mat-radio-button value="en">{{ 'LANGUAGE.ENGLISH' | translate }}</mat-radio-button>
+    <mat-radio-button value="bg">{{ 'LANGUAGE.BULGARIAN' | translate }}</mat-radio-button>
+    <mat-radio-button value="fr">{{ 'LANGUAGE.FRENCH' | translate }}</mat-radio-button>
+  </mat-radio-group>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>{{ 'BUTTONS.CANCEL' | translate }}</button>
+  <button mat-button mat-dialog-close>{{ 'BUTTONS.SAVE' | translate }}</button>
+</div>

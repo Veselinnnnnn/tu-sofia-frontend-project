@@ -1,0 +1,126 @@
+<div class="container">
+  <div class="hero">
+    <div class="hero-content">
+      <h1>{{ 'HERO.TITLE' | translate }}</h1>
+      <p>{{ 'HERO.DESCRIPTION' | translate }}</p>
+      <div class="hero-content-buttons">
+        <button class="cta-button" (click)="navigateToAvailableAnimals()">{{ 'HERO.ADOPT_NOW' | translate }}</button>
+        <button class="cta-button" (click)="navigateToAvailableAnimals()">{{ 'HERO.BOOK_WALK' | translate }}</button>
+      </div>
+    </div>
+    <img src="assets/images/hero-image.png" alt="{{ 'HERO.IMAGE_ALT' | translate }}" class="hero-image">
+  </div>
+
+  <div class="main-content">
+    <section class="about-us">
+      <h2>{{ 'ABOUT_US.TITLE' | translate }}</h2>
+      <p>{{ 'ABOUT_US.DESCRIPTION' | translate }}</p>
+    </section>
+
+    <section class="featured-pets">
+      <h2>{{ 'FEATURED_PETS.TITLE' | translate }}</h2>
+
+      <div *ngIf="featuredPets && featuredPets.length > 0; else noPetsMessage">
+        <div class="pet-cards">
+          <div class="pet-card" *ngFor="let pet of featuredPets; let i = index">
+            <img [src]="'data:image/png;base64,' + pet.img" alt="{{ 'FEATURED_PETS.IMAGE_ALT' | translate }} {{ i + 1 }}" class="pet-image">
+            <h3>{{ pet.name }}</h3>
+            <p>{{ pet.slogan }}</p>
+            <a class="cta-button" (click)="navigateToAnimalDetails(pet)">{{ 'FEATURED_PETS.MEET' | translate }} {{ pet.name }}</a>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #noPetsMessage>
+        <div class="no-pets-message">
+          <p>{{ 'FEATURED_PETS.NO_PETS_MESSAGE' | translate }}</p>
+        </div>
+      </ng-template>
+    </section>
+
+    <section class="services">
+      <h2>{{ 'SERVICES.TITLE' | translate }}</h2>
+      <div class="service-cards">
+        <div class="service-card" (click)="navigateToAvailableAnimals()">
+          <h3>{{ 'SERVICES.ADOPT_A_PET' | translate }}</h3>
+          <p>{{ 'SERVICES.ADOPT_DESCRIPTION' | translate }}</p>
+        </div>
+        <div class="service-card" (click)="navigateToAvailableAnimals()">
+          <h3>{{ 'SERVICES.ANIMAL_WALKS' | translate }}</h3>
+          <p>{{ 'SERVICES.WALK_DESCRIPTION' | translate }}</p>
+        </div>
+        <div class="service-card" matTooltip="{{ 'SERVICES.COMING_SOON' | translate }}" matTooltipPosition="above">
+          <h3>{{ 'SERVICES.VOLUNTEER_OPPORTUNITIES' | translate }}</h3>
+          <p>{{ 'SERVICES.VOLUNTEER_DESCRIPTION' | translate }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="events">
+      <h2>{{ 'EVENTS.TITLE' | translate }}</h2>
+      <div class="event-list" *ngIf="events.length > 0; else noEvents">
+        <div *ngFor="let event of events" class="event-item">
+          <h3>{{ event.title }}</h3>
+          <p>{{ event.description }} - {{ event.dateTime | date}}</p>
+        </div>
+      </div>
+      <ng-template #noEvents class="event-list">
+        <div class="event-item">
+          <p>{{ 'EVENTS.NO_EVENTS' | translate }}</p>
+        </div>
+      </ng-template>
+    </section>
+
+    <div class="testimonial-list-page">
+      <h2>{{ 'TESTIMONIALS.TITLE' | translate }}</h2>
+
+      <div *ngIf="isFeedbackEmpty" class="no-testimonials-yet">
+        <p>{{ 'TESTIMONIALS.NO_FEEDBACK' | translate }}</p>
+      </div>
+
+      <div *ngIf="!isFeedbackEmpty" class="testimonial-list">
+        <div *ngFor="let testimonial of displayedTestimonials">
+          <mat-card class="testimonial-card">
+            <mat-card-content class="testimonial-item">
+              <p>"{{ testimonial.message }}" - {{ getUserDisplayName(testimonial.user!) }} | {{ testimonial.createdAt | date}}</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="openTestimonialDialog()"
+          class="leave-feedback-button"
+        >
+          {{ 'TESTIMONIALS.LEAVE_FEEDBACK' | translate }}
+        </button>
+        <button
+          mat-raised-button
+          [class.disabled]="isFeedbackEmpty"
+          [disabled]="isFeedbackEmpty"
+          [routerLink]="['/testimonials']"
+          class="see-more-button"
+        >
+          {{ 'TESTIMONIALS.SEE_MORE' | translate }}
+        </button>
+      </div>
+    </div>
+
+    <section class="donate">
+      <h2>{{ 'DONATE.TITLE' | translate }}</h2>
+      <p>{{ 'DONATE.DESCRIPTION' | translate }}</p>
+
+      <div class="donation-progress">
+        <h3>{{ 'DONATE.GOAL' | translate }}: ${{ goalAmount }}</h3>
+        <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+        <p>{{ currentDonations }} {{ 'DONATE.OF' | translate }} {{ goalAmount }} {{ 'DONATE.GOAL_REACHED' | translate }} ({{ progress }}%)</p>
+      </div>
+
+      <button mat-raised-button color="primary" (click)="openDonateDialog()">{{ 'DONATE.DONATE_NOW' | translate }}</button>
+    </section>
+
+  </div>
+</div>
