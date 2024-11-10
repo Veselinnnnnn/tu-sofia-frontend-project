@@ -124,7 +124,7 @@ export class EventPageComponent implements OnInit{
 
   private checkAdminStatus(): void {
     this.userService.getBasicInfo(
-      this.localStorageService.get('userId')
+      Number(this.localStorageService.get('userId'))
     ).subscribe((response) => {
       this.isAdmin = response.role === 'ADMIN';
     })

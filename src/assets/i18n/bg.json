@@ -17,6 +17,7 @@
   "BUTTONS": {
     "SAVE": "Запази",
     "CANCEL": "Отказ",
+    "LOGOUT": "Изход",
     "AVAILABLE_ANIMALS": "Налични животни!!"
   },
   "SETTINGS": {

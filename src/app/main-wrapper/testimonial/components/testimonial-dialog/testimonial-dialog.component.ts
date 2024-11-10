@@ -35,7 +35,7 @@ export class TestimonialDialogComponent {
   public submitFeedback(): void {
     const testimonialRequest: TestimonialRequestModel = {
       message: this.message,
-      userId: this.localStorageService.get('userId'),
+      userId: this.localStorageService.get('userId') || '0',
     };
 
     if (this.isEditMode) {

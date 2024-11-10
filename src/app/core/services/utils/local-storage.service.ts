@@ -4,22 +4,27 @@ import { Injectable } from '@angular/core';
   providedIn: "root",
 })
 export class LocalStorageService {
+  private isLocalStorageAvailable(): boolean {
+    return typeof window !== 'undefined' && !!window.localStorage;
+  }
 
   constructor() { }
 
-  set(key: string, value: any): void {
-    localStorage.setItem(key, value.toString());
+  get(key: string): string | null {
+    if (this.isLocalStorageAvailable()) {
+      return localStorage.getItem(key);
+    }
+    return null;
+  }
+  set(key: string, value: string): void {
+    if (this.isLocalStorageAvailable()) {
+      localStorage.setItem(key, value);
+    }
   }
 
-  get(key: string): any {
-    return localStorage.getItem(key);
-  }
-
-  remove(key: string): void {
-    localStorage.removeItem(key);
-  }
-
-  clear() {
-    window.localStorage.clear();
+  clear(): void {
+    if (this.isLocalStorageAvailable()) {
+      localStorage.clear();
+    }
   }
 }

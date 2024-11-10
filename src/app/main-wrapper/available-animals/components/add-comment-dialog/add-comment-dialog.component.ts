@@ -64,7 +64,7 @@ export class AddCommentDialogComponent {
       } else {
         this.commentService.addComment(
           this.data.animal.id,
-          this.localStorageService.get('userId'),
+          Number(this.localStorageService.get('userId')),
           commentData
         ).subscribe(() => {
           this.matDialogRef.close();

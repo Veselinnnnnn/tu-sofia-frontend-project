@@ -31,7 +31,7 @@ export class UserWrapperComponent implements OnInit {
 
   protected getImageProfileImage() {
     this.userService.getProfileImage(
-      this.localStorageService.get('userId')
+      Number(this.localStorageService.get('userId'))
     ).subscribe(image => {
       const objectURL = URL.createObjectURL(image);
       this.profileImage = this.domSanitizer.bypassSecurityTrustUrl(objectURL);
@@ -40,7 +40,7 @@ export class UserWrapperComponent implements OnInit {
 
   protected getFirstAndLastName() {
     this.userService.getFirstAndLastName(
-      this.localStorageService.get('userId')
+      Number(this.localStorageService.get('userId'))
     ).subscribe(response => {
       this.name = `${response.firstName} ${response.lastName}`;
     });

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { LanguageSettingsComponent } from '../settings/language-settings/language-settings.component';
@@ -9,15 +9,17 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss'
 })
-export class NavComponent {
+export class NavComponent implements OnInit{
+  isLoggedIn: boolean = false;
   constructor(
     private router: Router,
     private dialog: MatDialog,
     private translate: TranslateService,
   ) {
-    const savedLanguage = localStorage.getItem('language') || 'en';
-    this.translate.setDefaultLang('en');
-    this.translate.use(savedLanguage);
+  }
+
+  ngOnInit() {
+    this.isLoggedIn = !!localStorage.getItem('token');
   }
 
   protected navigateToAvailableAnimals() {
@@ -41,4 +43,10 @@ export class NavComponent {
     this.translate.use(language);
     localStorage.setItem('language', language);
   }
+
+  logout(): void {
+    localStorage.clear();
+    this.router.navigate(['/home']);
+  }
+
 }

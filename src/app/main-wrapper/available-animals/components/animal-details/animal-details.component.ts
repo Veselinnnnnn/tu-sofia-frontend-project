@@ -35,7 +35,7 @@ export class AnimalDetailsComponent implements OnInit{
   protected getAnimal(animalId: number) {
     this.animalService.getAnimal(
       animalId,
-      this.localStorageService.get('userId'),
+      Number(this.localStorageService.get('userId')),
     ).subscribe((response) => {
       this.animal = response
       this.animal.img = `data:image/png;base64,${this.animal.img}`

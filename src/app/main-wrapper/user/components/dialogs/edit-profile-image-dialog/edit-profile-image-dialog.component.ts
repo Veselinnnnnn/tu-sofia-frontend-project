@@ -37,7 +37,7 @@ export class EditProfileImageDialogComponent {
 
   onSave(): void {
     this.userService.updateProfileImage(
-      this.localStorageService.get('userId'),
+      Number(this.localStorageService.get('userId')),
       this.selectedFile
     ).subscribe(() => {
       this.dialogRef.close();

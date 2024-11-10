@@ -17,6 +17,7 @@
   "BUTTONS": {
     "SAVE": "Enregistrer",
     "CANCEL": "Annuler",
+    "LOGOUT": "Déconnexion",
     "AVAILABLE_ANIMALS": "Animaux Disponibles!!"
   },
   "SETTINGS": {

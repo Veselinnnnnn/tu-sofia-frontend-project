@@ -48,8 +48,8 @@ export class LoginComponent implements OnInit {
           const payload = JSON.parse(atob((response?.token).split('.')[1]));
           const expirationDate = new Date(Number(payload.exp) * 1000);
           const userId = Number(payload.sub);
-          this.localStorageService.set('expires_at', expirationDate);
-          this.localStorageService.set('userId', userId);
+          this.localStorageService.set('expires_at', expirationDate.toString());
+          this.localStorageService.set('userId', userId.toString());
           this.localStorageService.set('token', response?.token);
           this.router.navigateByUrl('/home');
           this.clearForm();

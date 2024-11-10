@@ -28,7 +28,7 @@ export class BasicInfoComponent implements OnInit{
   }
 
   private getBasicInfo() {
-    const userId = this.localStorageService.get('userId');
+    const userId = Number(this.localStorageService.get('userId'));
     this.userService.getBasicInfo(userId).subscribe((data: UserResponseModel) => {
       this.data = data;
       this.userForm.patchValue(data);

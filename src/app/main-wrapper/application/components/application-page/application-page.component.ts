@@ -82,7 +82,7 @@ export class ApplicationPageComponent implements OnInit {
 
   private getData() {
     this.applicationService.getAllByUser(
-      this.localStorageService.get('userId')
+      Number(this.localStorageService.get('userId'))
     ).subscribe(requests => {
       this.dataSource.data = requests;
     });

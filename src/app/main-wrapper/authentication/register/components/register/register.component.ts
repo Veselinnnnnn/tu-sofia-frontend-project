@@ -72,7 +72,9 @@ export class RegisterComponent implements OnInit {
       firstName: [null, Validators.required],
       lastName: [null, Validators.required],
       email: [null, [Validators.required, Validators.email]],
-      password: [null, Validators.required]
+      password: [null, Validators.required],
+      role: 'USER',
+      title: 'user'
     });
   }
 }

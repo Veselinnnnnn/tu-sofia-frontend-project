@@ -118,7 +118,7 @@ export class AnimalCardComponent implements OnInit, AfterViewInit {
 
   private getUserRole() {
     this.userService.getBasicInfo(
-      this.localStorageService.get('userId')
+      Number(this.localStorageService.get('userId'))
     ).subscribe((response) => {
       this.isAdmin = response.role === 'ADMIN';
     });

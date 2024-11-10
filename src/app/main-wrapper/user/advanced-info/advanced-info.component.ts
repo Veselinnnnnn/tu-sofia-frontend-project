@@ -30,7 +30,7 @@ export class AdvancedInfoComponent implements OnInit{
 
   protected getUserAdvancedInfo(): void {
     this.userService.getAdvancedInfo(
-      this.localStorageService.get('userId')
+      Number(this.localStorageService.get('userId'))
     ).subscribe(
       (data) => {
         this.userForm.patchValue({

@@ -17,8 +17,11 @@
       [btnContent]="'BUTTONS.AVAILABLE_ANIMALS' | translate"
       [btnStyle]="'rounded background-purple font-white'"
     ></app-styled-button>
-    <a routerLink="/user" routerLinkActive="active">
+    <a *ngIf="isLoggedIn" routerLink="/user" routerLinkActive="active">
       <mat-icon>person</mat-icon>
+    </a>
+    <a *ngIf="!isLoggedIn" routerLink="/authentication/login" routerLinkActive="active">
+      <mat-icon>login</mat-icon>
     </a>
     <button mat-icon-button [matMenuTriggerFor]="settingsMenu">
       <mat-icon>settings</mat-icon>
@@ -27,6 +30,10 @@
       <button mat-menu-item (click)="openLanguageSettings()">
         <mat-icon>language</mat-icon>
         <span>{{ 'LANGUAGE.TITLE' | translate }}</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>{{ 'BUTTONS.LOGOUT' | translate }}</span>
       </button>
     </mat-menu>
   </div>

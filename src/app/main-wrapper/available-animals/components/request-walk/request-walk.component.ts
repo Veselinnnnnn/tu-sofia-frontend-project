@@ -46,7 +46,7 @@ export class RequestWalkComponent implements OnInit {
       this.editMode = true;
       this.animalService.getAnimal(
         this.data?.request?.animalId,
-        this.localStorageService.get('userId')
+        Number(this.localStorageService.get('userId'))
       ).subscribe((response) => {
         this.setDefaultAnimal(response);
       });

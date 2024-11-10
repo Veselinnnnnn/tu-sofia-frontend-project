@@ -17,6 +17,7 @@
   "BUTTONS": {
     "SAVE": "Save",
     "CANCEL": "Cancel",
+    "LOGOUT": "Logout",
     "AVAILABLE_ANIMALS": "Available Animals!!"
   },
   "SETTINGS": {
@@ -229,7 +230,7 @@
       "IMAGE_PREVIEW": "Image Preview"
     },
     "ERRORS": {
-      "REQUIRED": "{field} is required.",
+      "REQUIRED": "field is required.",
       "AGE_MIN": "Age must be a positive number."
     },
     "BUTTONS": {

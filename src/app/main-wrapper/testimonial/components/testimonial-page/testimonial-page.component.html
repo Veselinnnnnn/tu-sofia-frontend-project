@@ -15,10 +15,10 @@
             <p>"{{ testimonial.message }}" - {{ getUserDisplayName(testimonial.user!) }} | {{ testimonial.createdAt | date:'short' }}</p>
             <div class="icon-buttons" *ngIf="isUserTestimonial(testimonial)">
               <button mat-icon-button (click)="openEditDialog(testimonial)">
-                <mat-icon>{{ 'TESTIMONIAL_PAGE.EDIT_BUTTON' | translate }}</mat-icon>
+                <mat-icon>edit</mat-icon>
               </button>
               <button mat-icon-button color="warn" (click)="deleteTestimonial(testimonial.id!)">
-                <mat-icon>{{ 'TESTIMONIAL_PAGE.DELETE_BUTTON' | translate }}</mat-icon>
+                <mat-icon>delete</mat-icon>
               </button>
             </div>
           </mat-card-content>

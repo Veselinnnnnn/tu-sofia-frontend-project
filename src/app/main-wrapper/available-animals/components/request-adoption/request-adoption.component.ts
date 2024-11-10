@@ -87,7 +87,7 @@ export class RequestAdoptionComponent implements OnInit {
         this.setDefaultAnimal();
       }
 
-      this.userService.getBasicInfo(this.localStorageService.get('userId')).subscribe((basicInfoResponse) => {
+      this.userService.getBasicInfo(Number(this.localStorageService.get('userId'))).subscribe((basicInfoResponse) => {
         console.log("Basic Info Response", basicInfoResponse);
 
         this.adoptionForm.patchValue({
@@ -97,7 +97,7 @@ export class RequestAdoptionComponent implements OnInit {
         });
       });
 
-      this.userService.getAdvancedInfo(this.localStorageService.get('userId')).subscribe((response) => {
+      this.userService.getAdvancedInfo(Number(this.localStorageService.get('userId'))).subscribe((response) => {
         console.log("Backend Response", response);
 
         this.adoptionForm.patchValue({

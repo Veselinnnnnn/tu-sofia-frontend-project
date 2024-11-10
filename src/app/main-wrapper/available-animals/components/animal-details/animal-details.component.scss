@@ -116,7 +116,6 @@ $star-empty-color: #ddd;
         }
 
         .name-breed, .age, .slogan {
-          font-family: 'Brush Script MT', cursive;
         }
       }
     }
@@ -149,7 +148,6 @@ $star-empty-color: #ddd;
           padding: 0.75em 0;
           font-weight: bold;
           font-size: 2.5em;
-          font-family: 'Brush Script MT', cursive;
         }
 
         .description {
@@ -157,7 +155,6 @@ $star-empty-color: #ddd;
           font-size: 1.5em;
           text-align: justify;
           padding: 0 2em;
-          font-family: 'Brush Script MT', cursive;
         }
       }
 
@@ -193,7 +190,6 @@ $star-empty-color: #ddd;
       padding: 0.75em 0 0.75em 1em;
       font-weight: bold;
       font-size: 2.5em;
-      font-family: 'Brush Script MT', cursive;
 
       mat-icon {
         cursor: pointer;
@@ -204,7 +200,6 @@ $star-empty-color: #ddd;
       width: 100%;
       text-align: center;
       font-size: 1.5em;
-      font-family: 'Brush Script MT', cursive;
       margin: 1em 0;
     }
 
@@ -222,7 +217,6 @@ $star-empty-color: #ddd;
         .comment {
           width: 95%;
           font-size: 1.5em;
-          font-family: 'Brush Script MT', cursive;
         }
       }
     }

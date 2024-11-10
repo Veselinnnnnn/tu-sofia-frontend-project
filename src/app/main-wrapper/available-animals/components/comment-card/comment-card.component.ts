@@ -26,7 +26,7 @@ export class CommentCardComponent {
     private localStorageService: LocalStorageService,
     private dialog: MatDialog,
   ) {
-    this.userId = this.localStorageService.get('userId');
+    this.userId = Number(this.localStorageService.get('userId'));
   }
 
   protected onDeleteComment() {
@@ -59,7 +59,7 @@ export class CommentCardComponent {
   protected onLikeClick(commentId: number) {
     this.commentService.incrementLikes(
       commentId,
-      this.localStorageService.get('userId'),
+      Number(this.localStorageService.get('userId')),
     ).subscribe((response: CommentResponseModel) => {
       this.comment.likes = response.likes;
       this.comment.dislikes = response.dislikes;
@@ -70,7 +70,7 @@ export class CommentCardComponent {
   protected onDislikeClick(commentId: number) {
     this.commentService.incrementDislikes(
       commentId,
-      this.localStorageService.get('userId'),
+      Number(this.localStorageService.get('userId')),
     ).subscribe((response: CommentResponseModel) => {
       this.comment.likes = response.likes;
       this.comment.dislikes = response.dislikes;

@@ -12,6 +12,7 @@ import { LanguageSettingsComponent } from './components/settings/language-settin
 import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
+import { NgIf } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,25 +21,26 @@ import { FormsModule } from '@angular/forms';
     NavComponent,
     LanguageSettingsComponent
   ],
-  imports: [
-    MatIcon,
-    SharedModule,
-    RouterLink,
-    RouterLinkActive,
-    MatDialogContent,
-    MatDialogActions,
-    MatDialogTitle,
-    MatButton,
-    MatMenu,
-    MatMenuItem,
-    MatIconButton,
-    MatMenuTrigger,
-    MatRadioGroup,
-    MatRadioButton,
-    MatDialogClose,
-    TranslateModule,
-    FormsModule
-  ],
+    imports: [
+        MatIcon,
+        SharedModule,
+        RouterLink,
+        RouterLinkActive,
+        MatDialogContent,
+        MatDialogActions,
+        MatDialogTitle,
+        MatButton,
+        MatMenu,
+        MatMenuItem,
+        MatIconButton,
+        MatMenuTrigger,
+        MatRadioGroup,
+        MatRadioButton,
+        MatDialogClose,
+        TranslateModule,
+        FormsModule,
+        NgIf
+    ],
   exports: [
     FooterComponent,
     NavComponent,
